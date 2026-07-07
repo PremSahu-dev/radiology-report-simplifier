@@ -1,0 +1,1145 @@
+/* part -1 */
+/*=========================================
+        GOOGLE FONT & RESET
+=========================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:#f4f7fc;
+    overflow-x:hidden;
+
+}
+
+/*=========================================
+        WRAPPER
+=========================================*/
+
+.wrapper{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+/*=========================================
+        SIDEBAR
+=========================================*/
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:270px;
+    height:100vh;
+
+    background:linear-gradient(180deg,#0d6efd,#0b5ed7);
+
+    color:#fff;
+
+    padding:25px 20px;
+
+    overflow-y:auto;
+
+    box-shadow:5px 0 20px rgba(0,0,0,.15);
+
+}
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.logo img{
+
+    width:70px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    padding:6px;
+
+    margin-bottom:15px;
+
+}
+
+.logo h3{
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.menu{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.menu li{
+
+    margin-bottom:12px;
+
+}
+
+.menu li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.menu li a:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.menu li.active a{
+
+    background:#fff;
+
+    color:#0d6efd;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+        MAIN CONTENT
+=========================================*/
+
+.main-content{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    padding:35px;
+
+}
+
+/*=========================================
+        TOPBAR
+=========================================*/
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.topbar h2{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+.topbar p{
+
+    margin-top:8px;
+
+    color:#777;
+
+}
+
+.topbar .btn{
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+        RESULT CARD
+=========================================*/
+
+.result-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+/* part - 2 */
+
+/*=========================================
+        SCAN PREVIEW CARD
+=========================================*/
+
+.scan-preview{
+
+    background:#ffffff;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.scan-preview:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.scan-preview h4{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:20px;
+
+}
+
+.scan-preview img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:contain;
+
+    border-radius:15px;
+
+    border:2px solid #e9ecef;
+
+    background:#fafafa;
+
+}
+
+/*=========================================
+        PATIENT INFORMATION
+=========================================*/
+
+.patient-info{
+
+    background:#ffffff;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    margin-top:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.patient-info:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.patient-info h4{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:20px;
+
+}
+
+/*=========================================
+        PATIENT TABLE
+=========================================*/
+
+.patient-info table{
+
+    margin-bottom:0;
+
+}
+
+.patient-info table th{
+
+    width:40%;
+
+    color:#0d6efd;
+
+    font-weight:600;
+
+    padding:14px;
+
+    border:none;
+
+}
+
+.patient-info table td{
+
+    color:#555;
+
+    padding:14px;
+
+    border:none;
+
+}
+
+.patient-info table tr{
+
+    border-bottom:1px solid #eeeeee;
+
+}
+
+.patient-info table tr:last-child{
+
+    border-bottom:none;
+
+}
+
+/*=========================================
+        ICONS
+=========================================*/
+
+.scan-preview i,
+.patient-info i{
+
+    margin-right:8px;
+
+}
+
+/*=========================================
+        CARD ANIMATION
+=========================================*/
+
+.scan-preview,
+.patient-info{
+
+    animation:fadeCard .8s ease;
+
+}
+
+@keyframes fadeCard{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* part - 3 */
+
+/*=========================================
+        AI DIAGNOSIS CARD
+=========================================*/
+
+.diagnosis-card{
+
+    background:#ffffff;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.diagnosis-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.diagnosis-card h3{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+.diagnosis-card h3 i{
+
+    margin-right:10px;
+
+}
+
+/*=========================================
+        RESULT BOX
+=========================================*/
+
+.result-box{
+
+    margin-top:25px;
+
+    padding:25px;
+
+    border-radius:18px;
+
+}
+
+.result-box.success{
+
+    background:#ecfff3;
+
+    border-left:6px solid #198754;
+
+}
+
+.result-box.warning{
+
+    background:#fff8e6;
+
+    border-left:6px solid #ffc107;
+
+}
+
+.result-box.danger{
+
+    background:#fff0f0;
+
+    border-left:6px solid #dc3545;
+
+}
+
+.result-box h4{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.result-box h2{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+}
+
+.result-box p{
+
+    color:#666;
+
+    margin-bottom:0;
+
+    line-height:1.7;
+
+}
+
+/*=========================================
+        CONFIDENCE PROGRESS
+=========================================*/
+
+.progress{
+
+    height:24px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:#e9ecef;
+
+}
+
+.progress-bar{
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:width 1.5s ease;
+
+}
+
+/*=========================================
+        SEVERITY BADGE
+=========================================*/
+
+.badge{
+
+    padding:10px 18px;
+
+    font-size:14px;
+
+    border-radius:30px;
+
+}
+
+/*=========================================
+        AI FINDINGS
+=========================================*/
+
+.list-group{
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+}
+
+.list-group-item{
+
+    border:none;
+
+    border-bottom:1px solid #ececec;
+
+    padding:16px 20px;
+
+    font-size:15px;
+
+    color:#555;
+
+    transition:.3s;
+
+}
+
+.list-group-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.list-group-item:hover{
+
+    background:#f8f9ff;
+
+    padding-left:28px;
+
+}
+
+/*=========================================
+        RECOMMENDATION
+=========================================*/
+
+.alert{
+
+    border:none;
+
+    border-radius:18px;
+
+    padding:22px;
+
+}
+
+.alert h5{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.alert p{
+
+    margin-bottom:0;
+
+    line-height:1.8;
+
+    color:#444;
+
+}
+
+/*=========================================
+        SMOOTH ANIMATION
+=========================================*/
+
+.diagnosis-card{
+
+    animation:resultFade .8s ease;
+
+}
+
+@keyframes resultFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* part - 4 */
+
+/*=========================================
+        ACTION CARD
+=========================================*/
+
+.action-card{
+
+    margin-top:30px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.action-card h4{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+/*=========================================
+        ACTION BUTTONS
+=========================================*/
+
+.action-card .btn{
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    min-height:90px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.action-card .btn i{
+
+    font-size:28px;
+
+}
+
+.action-card .btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
+
+}
+
+/*=========================================
+        BUTTON COLORS
+=========================================*/
+
+.btn-danger:hover{
+
+    background:#bb2d3b;
+
+}
+
+.btn-success:hover{
+
+    background:#157347;
+
+}
+
+.btn-primary:hover{
+
+    background:#0b5ed7;
+
+}
+
+.btn-warning:hover{
+
+    background:#ffca2c;
+
+}
+
+.btn-dark:hover{
+
+    background:#212529;
+
+}
+
+/*=========================================
+        MEDICAL DISCLAIMER
+=========================================*/
+
+.alert-warning{
+
+    border:none;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-top:30px;
+
+    box-shadow:0 8px 20px rgba(255,193,7,.20);
+
+}
+
+.alert-warning h5{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.alert-warning p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+/*=========================================
+        TABLET RESPONSIVE
+=========================================*/
+
+@media (max-width:991px){
+
+    .sidebar{
+
+        width:220px;
+
+    }
+
+    .main-content{
+
+        margin-left:220px;
+
+        width:calc(100% - 220px);
+
+        padding:25px;
+
+    }
+
+    .topbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .scan-preview img{
+
+        height:320px;
+
+    }
+
+    .diagnosis-card{
+
+        margin-top:30px;
+
+    }
+
+}
+
+/* part - 5 */
+
+/*=========================================
+        MOBILE RESPONSIVE
+=========================================*/
+
+@media (max-width:768px){
+
+    /* Sidebar */
+
+    .wrapper{
+
+        display:block;
+
+    }
+
+    .sidebar{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+        padding:20px;
+
+    }
+
+    .logo{
+
+        margin-bottom:20px;
+
+    }
+
+    .logo img{
+
+        width:60px;
+
+    }
+
+    .logo h3{
+
+        font-size:22px;
+
+    }
+
+    .menu{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:10px;
+
+    }
+
+    .menu li{
+
+        margin-bottom:0;
+
+    }
+
+    .menu li a{
+
+        padding:10px 15px;
+
+        font-size:14px;
+
+    }
+
+    /* Main Content */
+
+    .main-content{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:15px;
+
+    }
+
+    /* Topbar */
+
+    .topbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .topbar h2{
+
+        font-size:24px;
+
+    }
+
+    .topbar .btn{
+
+        width:100%;
+
+    }
+
+    /* Result Card */
+
+    .result-card{
+
+        padding:20px;
+
+    }
+
+    /* Scan Preview */
+
+    .scan-preview img{
+
+        height:250px;
+
+    }
+
+    /* Patient Table */
+
+    .patient-info table th,
+
+    .patient-info table td{
+
+        display:block;
+
+        width:100%;
+
+        padding:8px 0;
+
+    }
+
+    .patient-info table tr{
+
+        display:block;
+
+        margin-bottom:15px;
+
+        border-bottom:1px solid #eee;
+
+    }
+
+    /* Diagnosis */
+
+    .diagnosis-card{
+
+        padding:20px;
+
+        margin-top:25px;
+
+    }
+
+    .diagnosis-card h3{
+
+        font-size:24px;
+
+    }
+
+    .result-box h2{
+
+        font-size:26px;
+
+    }
+
+    /* Buttons */
+
+    .action-card{
+
+        padding:20px;
+
+    }
+
+    .action-card .btn{
+
+        min-height:75px;
+
+        font-size:15px;
+
+    }
+
+}
+
+/*=========================================
+        SMALL MOBILE
+=========================================*/
+
+@media (max-width:480px){
+
+    .topbar h2{
+
+        font-size:20px;
+
+    }
+
+    .topbar p{
+
+        font-size:14px;
+
+    }
+
+    .scan-preview h4,
+
+    .patient-info h4,
+
+    .diagnosis-card h3,
+
+    .action-card h4{
+
+        font-size:20px;
+
+    }
+
+    .scan-preview img{
+
+        height:180px;
+
+    }
+
+    .result-box{
+
+        padding:18px;
+
+    }
+
+    .result-box h2{
+
+        font-size:22px;
+
+    }
+
+    .progress{
+
+        height:18px;
+
+    }
+
+    .progress-bar{
+
+        font-size:12px;
+
+    }
+
+    .list-group-item{
+
+        font-size:14px;
+
+    }
+
+    .alert{
+
+        padding:18px;
+
+    }
+
+    .action-card .btn{
+
+        width:100%;
+
+    }
+
+}
+
+/*=========================================
+        SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0d6efd;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f1f1f1;
+
+}
+
+/*=========================================
+        SMOOTH SCROLL
+=========================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}

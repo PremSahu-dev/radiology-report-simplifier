@@ -20,6 +20,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+        <!-- <link rel="stylesheet" href="../static/css/theme.css"> -->
 
     <!-- CSS -->
     <!-- <link rel="stylesheet" href="{% static 'css/login.css' %}"> -->
@@ -102,25 +103,53 @@
 
                     </div>
 
-                    <div class="d-flex justify-content-between mb-4">
+                    <!-- changing part -->
 
-                        <div>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
 
-                            <input type="checkbox">
+    <div class="form-check">
 
-                            Remember Me
+        <input
+            class="form-check-input"
+            type="checkbox"
+            id="remember">
 
-                        </div>
+        <label
+            class="form-check-label"
+            for="remember">
 
-                        <a href="#">Forgot Password?</a>
+            Remember Me
 
-                    </div>
+        </label>
 
-                    <button class="btn btn-primary w-100">
+    </div>
 
-                        Login
+    <a href="#">Forgot Password?</a>
 
-                    </button>
+</div>
+
+ 
+                    
+ <!-- changing part -->
+
+    <!-- <button type="submit" class="btn btn-primary w-100 login-btn">
+
+    <span class="btn-text">
+
+        Login
+
+    </span>
+
+    <span class="spinner-border spinner-border-sm d-none loading-spinner"></span>
+
+</button> -->
+<button type="submit" class="btn btn-primary w-100">
+
+    Login
+
+</button>
+ <!-- changing part ending -->
+                   
 
                 </form>
 
@@ -152,8 +181,16 @@
     </div>
 
 </div>
+
+<script src="../static/js/theme.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+
+<!-- <script src="../static/js/login.js"></script> -->
+
+  <!-- baad me changing part -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="../static/js/login.js"></script>
 

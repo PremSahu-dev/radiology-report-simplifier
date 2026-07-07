@@ -812,7 +812,7 @@ body{
 
 .btn-primary{
 
-    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    background:linear-gradient(135deg,#3b68c3,#98a4c3);
 
     border:none;
 
@@ -870,7 +870,7 @@ body{
 
 .card-header-custom h3{
 
-    color:#1e3a8a;
+    color:#2854ac;
 
     font-weight:700;
 
