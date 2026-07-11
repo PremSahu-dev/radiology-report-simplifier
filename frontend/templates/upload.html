@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,28 @@
     <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+=======
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Scan | MediScan AI</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
           <link rel="stylesheet" href="../static/css/theme.css">
+<<<<<<< HEAD
     <!-- Upload CSS -->
     <link rel="stylesheet" href="../static/css/upload.css">
 </head>
@@ -25,36 +44,79 @@
             <h3>MediScan AI</h3>
         </div>
         <ul class="menu">
+=======
+
+    <!-- Upload CSS -->
+    <link rel="stylesheet" href="../static/css/upload.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <img src="../static/images/logo.png" width="60">
+
+            <h3>MediScan AI</h3>
+
+        </div>
+
+        <ul class="menu">
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
             <li>
                 <a href="dashboard.html">
                     <i class="fas fa-home"></i>
                     Dashboard
                 </a>
             </li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
             <li class="active">
                 <a href="upload.html">
                     <i class="fas fa-upload"></i>
                     Upload Scan
                 </a>
             </li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
             <li>
                 <a href="reports.html">
                     <i class="fas fa-file-medical"></i>
                    AI Reports
                 </a>
             </li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
             <li>
                 <a href="profile.html">
                     <i class="fas fa-user"></i>
                     Profile
                 </a>
             </li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
             <li>
                 <a href="index.html">
                     <i class="fas fa-sign-out-alt"></i>
                     Logout
                 </a>
             </li>
+<<<<<<< HEAD
         </ul>
     </aside>
     <!-- ================= Main ================= -->
@@ -85,11 +147,74 @@
                         <p>
                             Upload X-Ray, CT Scan, MRI or DICOM Image
                         </p>
+=======
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main-content">
+
+        <!-- Topbar -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h2>Upload Medical Scan</h2>
+
+                <p class="text-muted">
+
+                    Upload X-Ray, MRI or CT Scan for AI Analysis
+
+                </p>
+
+            </div>
+
+            <a href="dashboard.html" class="btn btn-primary">
+
+                <i class="fas fa-arrow-left"></i>
+
+                Dashboard
+
+            </a>
+
+        </div>
+
+        <!-- Upload Card -->
+
+        <div class="upload-card">
+
+            <div class="row">
+
+                <!-- Left -->
+
+                <div class="col-lg-7">
+
+                    <!-- part - 2 -->
+                                         <!-- Upload Area -->
+
+                    <div class="upload-area" id="dropArea">
+
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+
+                        <h3>Drag & Drop Medical Scan</h3>
+
+                        <p>
+
+                            Upload X-Ray, CT Scan, MRI or DICOM Image
+
+                        </p>
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
                         <input
                             type="file"
                             id="fileInput"
                             accept=".png,.jpg,.jpeg,.dcm"
                             hidden>
+<<<<<<< HEAD
                         <button
                             class="btn btn-primary mt-3"
                             onclick="document.getElementById('fileInput').click()">
@@ -103,10 +228,37 @@
                     </div>
                     <!-- Upload Progress -->
                     <div class="progress mt-4 d-none" id="progressContainer">
+=======
+
+                        <button
+                            class="btn btn-primary mt-3"
+                            onclick="document.getElementById('fileInput').click()">
+
+                            <i class="fas fa-folder-open"></i>
+
+                            Browse File
+
+                        </button>
+
+                        <small class="d-block mt-3 text-muted">
+
+                            Supported Formats:
+                            PNG, JPG, JPEG, DICOM (.dcm)
+
+                        </small>
+
+                    </div>
+
+                    <!-- Upload Progress -->
+
+                    <div class="progress mt-4 d-none" id="progressContainer">
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
                         <div
                             class="progress-bar progress-bar-striped progress-bar-animated"
                             id="progressBar"
                             style="width:0%;">
+<<<<<<< HEAD
                             0%
                         </div>
                     </div>
@@ -115,10 +267,30 @@
                         <h5>
                             Uploaded Scan
                         </h5>
+=======
+
+                            0%
+
+                        </div>
+
+                    </div>
+
+                    <!-- Image Preview -->
+
+                    <div class="preview-card mt-4 d-none" id="previewCard">
+
+                        <h5>
+
+                            Uploaded Scan
+
+                        </h5>
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
                         <img
                             id="previewImage"
                             class="img-fluid rounded shadow mt-3"
                             alt="Preview">
+<<<<<<< HEAD
                         <div class="mt-4">
                             <button
                                 class="btn btn-success me-2"
@@ -150,17 +322,94 @@
             <label class="form-label">
                 Patient Name
             </label>
+=======
+
+                        <div class="mt-4">
+
+                            <button
+                                class="btn btn-success me-2"
+                                id="analyzeBtn">
+
+                                <i class="fas fa-brain"></i>
+
+                                Analyze with AI
+
+                            </button>
+
+                            <button
+                                class="btn btn-danger"
+                                id="removeBtn">
+
+                                <i class="fas fa-trash"></i>
+
+                                Remove
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Side -->
+
+                <div class="col-lg-5">
+
+                    <!-- part -3  -->
+
+                    <!-- ================= Patient Information ================= -->
+
+<div class="patient-form">
+
+    <h4 class="mb-4">
+
+        <i class="fas fa-user-injured text-primary"></i>
+
+        Patient Information
+
+    </h4>
+
+    <form id="patientForm">
+
+        <!-- Patient Name -->
+
+        <div class="mb-3">
+
+            <label class="form-label">
+
+                Patient Name
+
+            </label>
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
             <input
                 type="text"
                 class="form-control"
                 placeholder="Enter Patient Name"
                 required>
+<<<<<<< HEAD
         </div>
         <!-- Age -->
         <div class="mb-3">
             <label class="form-label">
                 Age
             </label>
+=======
+
+        </div>
+
+        <!-- Age -->
+
+        <div class="mb-3">
+
+            <label class="form-label">
+
+                Age
+
+            </label>
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
             <input
                 type="number"
                 class="form-control"
@@ -168,6 +417,7 @@
                 min="1"
                 max="120"
                 required>
+<<<<<<< HEAD
         </div>
         <!-- Gender -->
         <div class="mb-3">
@@ -203,10 +453,82 @@
             <label class="form-label">
                 Hospital Name
             </label>
+=======
+
+        </div>
+
+        <!-- Gender -->
+
+        <div class="mb-3">
+
+            <label class="form-label">
+
+                Gender
+
+            </label>
+
+            <select class="form-select" required>
+
+                <option selected disabled>
+                    Select Gender
+                </option>
+
+                <option>Male</option>
+
+                <option>Female</option>
+
+                <option>Other</option>
+
+            </select>
+
+        </div>
+
+        <!-- Scan Type -->
+
+        <div class="mb-3">
+
+            <label class="form-label">
+
+                Scan Type
+
+            </label>
+
+            <select class="form-select" required>
+
+                <option selected disabled>
+
+                    Select Scan
+
+                </option>
+
+                <option>X-Ray</option>
+
+                <option>CT Scan</option>
+
+                <option>MRI</option>
+
+                <option>DICOM</option>
+
+            </select>
+
+        </div>
+
+        <!-- Hospital Name -->
+
+        <div class="mb-3">
+
+            <label class="form-label">
+
+                Hospital Name
+
+            </label>
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
             <input
                 type="text"
                 class="form-control"
                 placeholder="Enter Hospital Name">
+<<<<<<< HEAD
         </div> -->
         <!-- Scan Date -->
         <div class="mb-3">
@@ -222,10 +544,42 @@
             <label class="form-label">
                 Symptoms / Notes
             </label>
+=======
+
+        </div>
+
+        <!-- Scan Date -->
+
+        <div class="mb-3">
+
+            <label class="form-label">
+
+                Scan Date
+
+            </label>
+
+            <input
+                type="date"
+                class="form-control">
+
+        </div>
+
+        <!-- Symptoms -->
+
+        <div class="mb-4">
+
+            <label class="form-label">
+
+                Symptoms / Notes
+
+            </label>
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
             <textarea
                 class="form-control"
                 rows="4"
                 placeholder="Write patient symptoms..."></textarea>
+<<<<<<< HEAD
         </div> -->
         <!-- Submit -->
         <button
@@ -240,13 +594,53 @@
             </div>
         </div>
     </main>
+=======
+
+        </div>
+
+        <!-- Submit -->
+
+        <button
+            type="submit"
+            class="btn btn-success w-100">
+
+            <i class="fas fa-brain"></i>
+
+            Continue AI Analysis
+
+        </button>
+
+    </form>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
 </div>
 <script src="../static/js/theme.js"></script>
 <!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<<<<<<< HEAD
 <!-- Upload JS -->
 <script src="../static/js/upload.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../static/js/upload.js"></script>
+=======
+
+<!-- Upload JS -->
+<script src="../static/js/upload.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="../static/js/upload.js"></script>
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
 </body>
 </html>

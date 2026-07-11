@@ -1,11 +1,18 @@
 /*=========================================
         GOOGLE FONT & RESET
 =========================================*/
+<<<<<<< HEAD
 *{
+=======
+
+*{
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
+<<<<<<< HEAD
 }
 body{
     background:#f4f7fc;
@@ -246,10 +253,462 @@ textarea.form-control{
         transform:translateY(0);
     }
 }
+=======
+
+}
+
+body{
+
+    background:#f4f7fc;
+    overflow-x:hidden;
+    color:#333;
+
+}
+
+/*=========================================
+        WRAPPER
+=========================================*/
+
+.wrapper{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+/*=========================================
+        SIDEBAR
+=========================================*/
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:270px;
+    height:100vh;
+
+    background:linear-gradient(180deg,#0d6efd,#0b5ed7);
+
+    padding:25px 20px;
+
+    color:#fff;
+
+    overflow-y:auto;
+
+    box-shadow:5px 0 20px rgba(0,0,0,.15);
+
+}
+
+.logo{
+
+    text-align:center;
+    margin-bottom:40px;
+
+}
+
+.logo img{
+
+    width:75px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    padding:8px;
+
+    margin-bottom:15px;
+
+}
+
+.logo h3{
+
+    font-size:24px;
+    font-weight:700;
+
+}
+
+.menu{
+
+    list-style:none;
+    padding:0;
+
+}
+
+.menu li{
+
+    margin-bottom:12px;
+
+}
+
+.menu li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.menu li a:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.menu li.active a{
+
+    background:#fff;
+
+    color:#0d6efd;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+        MAIN CONTENT
+=========================================*/
+
+.main-content{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    padding:35px;
+
+}
+
+/*=========================================
+        TOPBAR
+=========================================*/
+
+.topbar{
+
+    margin-bottom:30px;
+
+}
+
+.topbar h2{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+.topbar p{
+
+    margin-top:8px;
+
+    color:#666;
+
+}
+
+/*=========================================
+        PROFILE CARD
+=========================================*/
+
+.profile-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+/*=========================================
+        PROFILE IMAGE
+=========================================*/
+
+.profile-image{
+
+    text-align:center;
+
+}
+
+.profile-image img{
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:6px solid #0d6efd;
+
+    box-shadow:0 12px 25px rgba(13,110,253,.25);
+
+}
+
+.profile-image .btn{
+
+    margin-top:20px;
+
+    border-radius:12px;
+
+    padding:12px 25px;
+
+    font-weight:600;
+
+}
+
+/* part -2 */
+
+/*=========================================
+        INFO BOXES
+=========================================*/
+
+.info-box{
+
+    background:#f8f9fc;
+
+    border:1px solid #e9ecef;
+
+    border-radius:15px;
+
+    padding:15px 18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    transition:.3s;
+
+    height:100%;
+
+}
+
+.info-box:hover{
+
+    background:#eef5ff;
+
+    border-color:#0d6efd;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(13,110,253,.12);
+
+}
+
+.info-box i{
+
+    width:45px;
+
+    height:45px;
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+}
+
+.info-box span{
+
+    font-size:15px;
+
+    color:#555;
+
+    font-weight:500;
+
+    word-break:break-word;
+
+}
+
+/*=========================================
+        PROFILE FORM
+=========================================*/
+
+.profile-form{
+
+    margin-top:35px;
+
+}
+
+.profile-form h4{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+    color:#222;
+
+}
+
+.profile-form h4 i{
+
+    color:#0d6efd;
+
+    margin-right:10px;
+
+}
+
+/*=========================================
+        FORM LABELS
+=========================================*/
+
+.form-label{
+
+    font-weight:600;
+
+    color:#444;
+
+    margin-bottom:8px;
+
+}
+
+/*=========================================
+        INPUTS & SELECT
+=========================================*/
+
+.form-control,
+
+.form-select{
+
+    height:55px;
+
+    border-radius:12px;
+
+    border:1px solid #dcdcdc;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    box-shadow:none;
+
+}
+
+textarea.form-control{
+
+    height:auto;
+
+    resize:none;
+
+    padding-top:12px;
+
+}
+
+.form-control:focus,
+
+.form-select:focus{
+
+    border-color:#0d6efd;
+
+    box-shadow:0 0 0 .2rem rgba(13,110,253,.15);
+
+}
+
+/*=========================================
+        BUTTONS
+=========================================*/
+
+.profile-form .btn{
+
+    border-radius:12px;
+
+    padding:12px 26px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.profile-form .btn i{
+
+    margin-right:8px;
+
+}
+
+.profile-form .btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.btn-outline-secondary:hover{
+
+    color:#fff;
+
+}
+
+/*=========================================
+        FORM ANIMATION
+=========================================*/
+
+.profile-form{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
 /* part -3 */
 /*=========================================
         SECURITY CARD
 =========================================*/
+<<<<<<< HEAD
 .security-card{
     background:#ffffff;
     padding:30px;
@@ -471,17 +930,453 @@ textarea.form-control{
 /*=========================================
         CARD HOVER EFFECT
 =========================================*/
+=======
+
+.security-card{
+
+    background:#ffffff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-top:30px;
+
+}
+
+.security-card h4{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:10px;
+
+}
+
+.security-card h4 i{
+
+    color:#0d6efd;
+
+    margin-right:10px;
+
+}
+
+.security-card hr{
+
+    margin:20px 0;
+
+    opacity:.15;
+
+}
+
+/*=========================================
+        PASSWORD INPUT GROUP
+=========================================*/
+
+.input-group{
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+.input-group .form-control{
+
+    border-right:none;
+
+}
+
+.input-group-text{
+
+    background:#ffffff;
+
+    border-left:none;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.input-group-text:hover{
+
+    background:#0d6efd;
+
+    color:#ffffff;
+
+}
+
+/*=========================================
+        CHANGE PASSWORD BUTTON
+=========================================*/
+
+.security-card .btn{
+
+    border-radius:12px;
+
+    padding:12px 25px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.security-card .btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(255,193,7,.35);
+
+}
+
+/*=========================================
+        PREFERENCES CARD
+=========================================*/
+
+.preferences-card{
+
+    background:#ffffff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-top:30px;
+
+}
+
+.preferences-card h4{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:10px;
+
+}
+
+.preferences-card h4 i{
+
+    color:#0d6efd;
+
+    margin-right:10px;
+
+}
+
+.preferences-card hr{
+
+    margin:20px 0;
+
+    opacity:.15;
+
+}
+
+/*=========================================
+        SWITCHES
+=========================================*/
+
+.form-check{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eeeeee;
+
+}
+
+.form-check:last-child{
+
+    border-bottom:none;
+
+}
+
+.form-check-label{
+
+    font-size:16px;
+
+    font-weight:500;
+
+    color:#444;
+
+}
+
+.form-check-input{
+
+    width:50px;
+
+    height:26px;
+
+    cursor:pointer;
+
+}
+
+.form-check-input:checked{
+
+    background-color:#0d6efd;
+
+    border-color:#0d6efd;
+
+}
+
+/*=========================================
+        ACCOUNT STATISTICS
+=========================================*/
+
+.account-stats{
+
+    margin-top:35px;
+
+}
+
+.stat-card{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+}
+
+.stat-card i{
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+}
+
+.stat-card h3{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:8px;
+
+}
+
+.stat-card p{
+
+    margin:0;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+/* part -4 */
+
+/*=========================================
+        RECENT ACTIVITY CARD
+=========================================*/
+
+.activity-card{
+
+    background:#ffffff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-top:35px;
+
+}
+
+.activity-card h4{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:10px;
+
+}
+
+.activity-card h4 i{
+
+    color:#0d6efd;
+
+    margin-right:10px;
+
+}
+
+.activity-card hr{
+
+    margin:20px 0;
+
+    opacity:.15;
+
+}
+
+/*=========================================
+        ACTIVITY ITEM
+=========================================*/
+
+.activity-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #eeeeee;
+
+    transition:.3s;
+
+}
+
+.activity-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.activity-item:hover{
+
+    transform:translateX(8px);
+
+}
+
+.activity-item i{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#eef5ff;
+
+    font-size:22px;
+
+}
+
+.activity-item h6{
+
+    margin:0;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#222;
+
+}
+
+.activity-item small{
+
+    color:#777;
+
+}
+
+/*=========================================
+        PROFILE FOOTER
+=========================================*/
+
+.profile-footer{
+
+    margin-top:40px;
+
+    padding:25px;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.profile-footer p{
+
+    margin:0;
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+.profile-footer strong{
+
+    color:#0d6efd;
+
+}
+
+/*=========================================
+        CARD HOVER EFFECT
+=========================================*/
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
 .profile-card,
 .security-card,
 .preferences-card,
 .activity-card,
 .stat-card{
+<<<<<<< HEAD
     transition:.35s;
 }
+=======
+
+    transition:.35s;
+
+}
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
 .profile-card:hover,
 .security-card:hover,
 .preferences-card:hover,
 .activity-card:hover{
+<<<<<<< HEAD
     transform:translateY(-5px);
     box-shadow:0 15px 35px rgba(0,0,0,.12);
 }
@@ -518,10 +1413,82 @@ textarea.form-control{
         width:150px;
         height:150px;
     }
+=======
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+/*=========================================
+        CUSTOM SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+    height:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0d6efd;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#0b5ed7;
+
+}
+
+/*=========================================
+        TABLET RESPONSIVE
+=========================================*/
+
+@media (max-width:991px){
+
+    .sidebar{
+
+        width:220px;
+
+    }
+
+    .main-content{
+
+        width:calc(100% - 220px);
+
+        margin-left:220px;
+
+        padding:25px;
+
+    }
+
+    .profile-image img{
+
+        width:150px;
+
+        height:150px;
+
+    }
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
     .profile-card,
     .security-card,
     .preferences-card,
     .activity-card{
+<<<<<<< HEAD
         padding:25px;
     }
     .topbar h2{
@@ -576,10 +1543,120 @@ textarea.form-control{
         font-size:15px;
     }
     /* Cards */
+=======
+
+        padding:25px;
+
+    }
+
+    .topbar h2{
+
+        font-size:28px;
+
+    }
+
+    .stat-card{
+
+        margin-bottom:20px;
+
+    }
+
+}
+
+/* part -5 */
+
+/*=========================================
+        MOBILE RESPONSIVE
+=========================================*/
+
+@media (max-width:768px){
+
+    /* Sidebar */
+
+    .sidebar{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+        padding:20px;
+
+    }
+
+    .logo{
+
+        margin-bottom:25px;
+
+    }
+
+    .menu{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:10px;
+
+    }
+
+    .menu li{
+
+        margin:0;
+
+    }
+
+    .menu li a{
+
+        padding:10px 15px;
+
+        font-size:14px;
+
+    }
+
+    /* Main Content */
+
+    .main-content{
+
+        width:100%;
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+    /* Topbar */
+
+    .topbar{
+
+        text-align:center;
+
+    }
+
+    .topbar h2{
+
+        font-size:28px;
+
+    }
+
+    .topbar p{
+
+        font-size:15px;
+
+    }
+
+    /* Cards */
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
     .profile-card,
     .security-card,
     .preferences-card,
     .activity-card{
+<<<<<<< HEAD
         padding:20px;
     }
     /* Profile Image */
@@ -624,10 +1701,100 @@ textarea.form-control{
         width:120px;
         height:120px;
     }
+=======
+
+        padding:20px;
+
+    }
+
+    /* Profile Image */
+
+    .profile-image{
+
+        margin-bottom:25px;
+
+    }
+
+    .profile-image img{
+
+        width:140px;
+
+        height:140px;
+
+    }
+
+    /* Buttons */
+
+    .btn{
+
+        width:100%;
+
+        margin-bottom:10px;
+
+    }
+
+    .text-end{
+
+        text-align:center !important;
+
+    }
+
+    /* Footer */
+
+    .profile-footer{
+
+        text-align:center;
+
+    }
+
+    .profile-footer .text-md-end{
+
+        text-align:center !important;
+
+        margin-top:10px;
+
+    }
+
+}
+
+/*=========================================
+        SMALL MOBILE RESPONSIVE
+=========================================*/
+
+@media (max-width:480px){
+
+    .main-content{
+
+        padding:15px;
+
+    }
+
+    .topbar h2{
+
+        font-size:24px;
+
+    }
+
+    .topbar p{
+
+        font-size:14px;
+
+    }
+
+    .profile-image img{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
     .profile-form h4,
     .security-card h4,
     .preferences-card h4,
     .activity-card h4{
+<<<<<<< HEAD
         font-size:20px;
     }
     .form-control,
@@ -700,4 +1867,142 @@ img{
 }
 a{
     text-decoration:none;
+=======
+
+        font-size:20px;
+
+    }
+
+    .form-control,
+    .form-select{
+
+        height:48px;
+
+        font-size:14px;
+
+    }
+
+    textarea.form-control{
+
+        min-height:110px;
+
+    }
+
+    .info-box{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:10px;
+
+    }
+
+    .activity-item{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .stat-card{
+
+        padding:20px;
+
+    }
+
+    .stat-card h3{
+
+        font-size:26px;
+
+    }
+
+    .stat-card p{
+
+        font-size:14px;
+
+    }
+
+    .profile-footer{
+
+        padding:18px;
+
+    }
+
+    .profile-footer p{
+
+        font-size:13px;
+
+        line-height:1.6;
+
+    }
+
+}
+
+/*=========================================
+        BUTTON ANIMATION
+=========================================*/
+
+.btn{
+
+    transition:all .35s ease;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/*=========================================
+        SMOOTH SCROLL
+=========================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/*=========================================
+        TEXT SELECTION
+=========================================*/
+
+::selection{
+
+    background:#0d6efd;
+
+    color:#ffffff;
+
+}
+
+/*=========================================
+        PREMIUM FINISH
+=========================================*/
+
+body{
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
 }

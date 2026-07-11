@@ -1,11 +1,21 @@
 /* =========================================
         GLOBAL DARK THEME
 ========================================= */
+<<<<<<< HEAD
+=======
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
 body.dark-mode{
     background:#121212 !important;
     color:#ffffff !important;
 }
+<<<<<<< HEAD
 /* Cards */
+=======
+
+/* Cards */
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
 body.dark-mode .card,
 body.dark-mode .settings-card,
 body.dark-mode .profile-card,
@@ -17,15 +27,28 @@ body.dark-mode .login-card{
     color:#ffffff !important;
     border:1px solid #333;
 }
+<<<<<<< HEAD
 /* Sidebar */
 body.dark-mode .sidebar{
     background:#181818 !important;
 }
 /* Topbar */
+=======
+
+/* Sidebar */
+
+body.dark-mode .sidebar{
+    background:#181818 !important;
+}
+
+/* Topbar */
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
 body.dark-mode .topbar{
     background:#1f1f1f !important;
     color:#ffffff;
 }
+<<<<<<< HEAD
 /* Inputs */
 body.dark-mode input,
 body.dark-mode textarea,
@@ -48,4 +71,47 @@ body.dark-mode td{
 body.dark-mode footer{
     background:#3b3838e3;
     color:white;
+=======
+
+/* Inputs */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select{
+
+    background:#2a2a2a !important;
+    color:white !important;
+    border:1px solid #555 !important;
+
+}
+
+/* Tables */
+
+body.dark-mode table{
+
+    color:white;
+
+}
+
+body.dark-mode th{
+
+    background:#252525;
+
+}
+
+body.dark-mode td{
+
+    background:#1d1d1d;
+
+}
+
+/* Footer */
+
+body.dark-mode footer{
+
+    background:#3b3838e3;
+
+    color:white;
+
+>>>>>>> b56bf1d85936dbdc0aa9b0f260a884ea4f178117
 }
