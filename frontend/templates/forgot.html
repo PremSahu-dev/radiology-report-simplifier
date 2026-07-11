@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Forgot Password | MediScan AI</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/forgot.css" />
+  </head>
+
+  <body>
+    <div class="forgot-page">
+      <div class="forgot-card">
+        <div class="text-center mb-4">
+          <img src="../static/images/logo.png" class="logo" alt="Logo" />
+
+          <h2>Forgot Password</h2>
+
+          <p class="text-muted">
+            Enter your registered email to receive an OTP.
+          </p>
+        </div>
+
+        <form id="forgotForm">
+          <!-- Email -->
+
+          <div class="mb-3">
+            <label>Email Address</label>
+
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <!-- Send OTP -->
+
+          <button type="button" class="btn btn-primary w-100" id="sendOtp">
+            <i class="fas fa-paper-plane"></i>
+
+            Send OTP
+          </button>
+
+          <hr />
+
+          <!-- part -2 -->
+
+          <!-- ================= OTP Section ================= -->
+
+          <div class="mb-3">
+            <label for="otp" class="form-label"> Enter OTP </label>
+
+            <input
+              type="text"
+              class="form-control"
+              id="otp"
+              maxlength="6"
+              placeholder="Enter 6-digit OTP"
+            />
+          </div>
+          <!-- //adding verify button -->
+<div id="otpSection">
+  <div class="d-grid mb-3">
+    <button type="button" class="btn btn-primary" id="verifyOtp">
+      Verify OTP
+    </button>
+  </div>
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <small id="timer">OTP expires in 60 seconds</small>
+    <button type="button" class="btn btn-link p-0" id="resendOtp">
+      Resend OTP
+    </button>
+  </div>
+</div>
+<!-- ========================================== -->
+<!-- PASSWORD RESET SECTION (Initially Hidden)  -->
+<!-- ========================================== -->
+<div id="passwordSection" style="display: none;" class="border p-4 rounded bg-light mb-3">
+  <h5 class="mb-3 text-center fw-bold">Create New Password</h5>
+  
+  <div class="mb-3">
+    <label for="newPassword" class="form-label">New Password</label>
+    <input type="password" class="form-control" id="newPassword" placeholder="Enter at least 6 characters">
+  </div>
+
+  <div class="mb-3">
+    <label for="confirmPassword" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter new password">
+  </div>
+
+  <div class="d-grid mt-4">
+    <button type="button" class="btn btn-success" id="submitNewPassword">
+      Reset & Update Password
+    </button>
+  </div>
+</div>
+          
+          <div class="d-grid gap-2">
+            <a href="login.html" class="btn btn-outline-secondary">
+              <i class="fas fa-arrow-left"></i>
+
+              Back to Login
+            </a>
+          </div>
+        </form>
+
+        <!-- ================= Footer ================= -->
+
+        <div class="text-center mt-4">
+          <small class="text-muted">
+            © 2026 <strong>MediScan AI</strong> | Secure Password Recovery
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SweetAlert2 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Forgot Password JS -->
+     
+
+    <script src="../static/js/forgot.js"></script>
+  </body>
+</html>

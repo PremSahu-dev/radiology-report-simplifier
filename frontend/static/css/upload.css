@@ -1,0 +1,416 @@
+/*=========================================
+        GOOGLE FONT & RESET
+=========================================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background:#f4f7fc;
+    overflow-x:hidden;
+}
+/*=========================================
+        WRAPPER
+=========================================*/
+.wrapper{
+    display:flex;
+    min-height:100vh;
+}
+/*=========================================
+        SIDEBAR
+=========================================*/
+.sidebar{
+    width:270px;
+    background:linear-gradient(180deg,#0d6efd,#0b5ed7);
+    color:#fff;
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    padding:25px 20px;
+    overflow-y:auto;
+    box-shadow:5px 0 20px rgba(0,0,0,.15);
+}
+.logo{
+    text-align:center;
+    margin-bottom:40px;
+}
+.logo img{
+    width:70px;
+    border-radius:50%;
+    background:#fff;
+    padding:6px;
+    margin-bottom:12px;
+}
+.logo h3{
+    font-size:24px;
+    font-weight:700;
+    margin:0;
+}
+.menu{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.menu li{
+    margin-bottom:12px;
+}
+.menu li a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 18px;
+    border-radius:12px;
+    transition:.3s;
+}
+.menu li a i{
+    width:24px;
+    text-align:center;
+    font-size:18px;
+}
+.menu li a:hover{
+    background:rgba(255,255,255,.18);
+}
+.menu .active a{
+    background:#fff;
+    color:#0d6efd;
+    font-weight:600;
+}
+/*=========================================
+        MAIN CONTENT
+=========================================*/
+.main-content{
+    margin-left:270px;
+    width:calc(100% - 270px);
+    padding:35px;
+}
+/*=========================================
+        TOPBAR
+=========================================*/
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+.topbar h2{
+    font-size:32px;
+    font-weight:700;
+    color:#222;
+}
+.topbar p{
+    margin-top:8px;
+    color:#777;
+}
+.topbar .btn{
+    padding:12px 22px;
+    border-radius:10px;
+    font-weight:600;
+}
+/*=========================================
+        UPLOAD CARD
+=========================================*/
+.upload-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+/* part - 2 */
+/*=========================================
+        UPLOAD AREA
+=========================================*/
+.upload-area{
+    border:3px dashed #0d6efd;
+    border-radius:20px;
+    padding:60px 30px;
+    text-align:center;
+    background:#f8fbff;
+    transition:.4s;
+    cursor:pointer;
+}
+.upload-area:hover{
+    background:#eef5ff;
+    border-color:#0b5ed7;
+    transform:translateY(-5px);
+}
+.upload-icon{
+    font-size:70px;
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+.upload-area h3{
+    font-size:28px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:12px;
+}
+.upload-area p{
+    color:#666;
+    margin-bottom:20px;
+}
+.upload-area button{
+    padding:12px 30px;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:600;
+}
+.upload-area small{
+    display:block;
+    margin-top:15px;
+    color:#888;
+}
+/*=========================================
+        PROGRESS BAR
+=========================================*/
+.progress{
+    height:25px;
+    border-radius:30px;
+    overflow:hidden;
+    background:#e9ecef;
+}
+.progress-bar{
+    font-size:14px;
+    font-weight:600;
+}
+/*=========================================
+        IMAGE PREVIEW
+=========================================*/
+.preview-card{
+    margin-top:30px;
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+.preview-card h5{
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+.preview-card img{
+    width:100%;
+    max-height:420px;
+    object-fit:contain;
+    border-radius:15px;
+    border:2px solid #dee2e6;
+}
+.preview-card .btn{
+    padding:12px 25px;
+    font-weight:600;
+    border-radius:10px;
+    margin-top:15px;
+}
+/*=========================================
+        BUTTON HOVER
+=========================================*/
+.preview-card .btn:hover{
+    transform:translateY(-3px);
+    transition:.3s;
+}
+/* part - 3 */
+/*=========================================
+        PATIENT FORM
+=========================================*/
+.patient-form{
+    background:#ffffff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.patient-form h4{
+    font-size:26px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:25px;
+}
+.patient-form h4 i{
+    margin-right:8px;
+}
+.patient-form .form-label{
+    font-weight:600;
+    color:#444;
+    margin-bottom:8px;
+}
+.patient-form .form-control,
+.patient-form .form-select{
+    height:52px;
+    border-radius:12px;
+    border:1px solid #dcdcdc;
+    font-size:15px;
+    transition:.3s;
+    box-shadow:none;
+}
+.patient-form textarea.form-control{
+    height:120px;
+    resize:none;
+    padding-top:15px;
+}
+.patient-form .form-control:focus,
+.patient-form .form-select:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 10px rgba(13,110,253,.20);
+    transform:translateY(-2px);
+}
+.patient-form input::placeholder,
+.patient-form textarea::placeholder{
+    color:#999;
+}
+.patient-form .btn{
+    height:55px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
+}
+.patient-form .btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(25,135,84,.30);
+}
+/*=========================================
+        DATE INPUT
+=========================================*/
+input[type="date"]{
+    cursor:pointer;
+}
+/*=========================================
+        FORM ANIMATION
+=========================================*/
+.patient-form{
+    animation:fadeIn .8s ease;
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/*=========================================
+        CARD HOVER EFFECT
+=========================================*/
+.patient-form:hover{
+    transform:translateY(-4px);
+    transition:.3s;
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+/* part - 4 */
+/*=========================================
+        RESPONSIVE DESIGN
+=========================================*/
+/* ---------- Tablet ---------- */
+@media (max-width:991px){
+    .sidebar{
+        width:220px;
+    }
+    .main-content{
+        margin-left:220px;
+        width:calc(100% - 220px);
+        padding:20px;
+    }
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+    .upload-card{
+        padding:25px;
+    }
+}
+/* ---------- Mobile ---------- */
+@media (max-width:768px){
+    .wrapper{
+        display:block;
+    }
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+        padding:20px;
+    }
+    .logo{
+        margin-bottom:20px;
+    }
+    .menu{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        justify-content:center;
+    }
+    .menu li{
+        margin-bottom:0;
+    }
+    .menu li a{
+        padding:10px 15px;
+        font-size:14px;
+    }
+    .main-content{
+        margin-left:0;
+        width:100%;
+        padding:15px;
+    }
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .topbar h2{
+        font-size:24px;
+    }
+    .upload-card{
+        padding:20px;
+    }
+    .upload-area{
+        padding:35px 20px;
+    }
+    .upload-icon{
+        font-size:50px;
+    }
+    .upload-area h3{
+        font-size:22px;
+    }
+    .preview-card{
+        margin-top:20px;
+    }
+    .preview-card img{
+        max-height:250px;
+    }
+    .patient-form{
+        margin-top:25px;
+        padding:20px;
+    }
+    .patient-form h4{
+        font-size:22px;
+    }
+    .patient-form .btn{
+        width:100%;
+    }
+}
+/* ---------- Small Mobile ---------- */
+@media (max-width:480px){
+    .topbar h2{
+        font-size:20px;
+    }
+    .upload-area{
+        padding:25px 15px;
+    }
+    .upload-area h3{
+        font-size:18px;
+    }
+    .upload-icon{
+        font-size:40px;
+    }
+    .preview-card img{
+        max-height:200px;
+    }
+    .patient-form{
+        padding:15px;
+    }
+}

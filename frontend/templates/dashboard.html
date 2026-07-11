@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | MediScan AI</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="../static/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+          <link rel="stylesheet" href="../static/css/theme.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet"
+          href="../static/css/dashboard.css">
+</head>
+<body>
+<!--=============================
+        DASHBOARD
+==============================-->
+<div class="dashboard">
+    <!--=========================
+            SIDEBAR
+    ==========================-->
+    <aside class="sidebar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="../static/images/logo.png"
+                 alt="Logo">
+            <h3>MediScan AI</h3>
+        </div>
+        <!-- Menu -->
+        <ul class="menu">
+            <li class="active">
+                <a href="dashboard.html">
+                    <i class="fas fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="upload.html">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Upload Scan</span>
+                </a>
+            </li>
+            <li>
+                <a href="reports.html">
+                    <i class="fas fa-file-medical"></i>
+                    <span>AI Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class="fas fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+        <!-- Logout -->
+        <div class="logout">
+            <a href="login.html">
+                <i class="fas fa-right-from-bracket"></i>
+                Logout
+            </a>
+        </div>
+    </aside>
+    <!--=========================
+          MAIN CONTENT
+    ==========================-->
+    <main class="main-content">
+        <!--=====================
+            TOP NAVBAR
+        ======================-->
+        <header class="topbar">
+            <!-- Left -->
+            <div class="left-top">
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2>
+                    Dashboard
+                </h2>
+            </div>
+            <!-- Search -->
+            <div class="search-box">
+                <input type="text"
+                       placeholder="Search Reports...">
+                <i class="fas fa-search"></i>
+            </div>
+            <!-- Right -->
+            <div class="top-right">
+                    <div id="liveTime" class="fw-bold text-primary"></div>
+                <!-- Notification -->
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                <!-- Profile -->
+                <div class="profile">
+                    <img src="../static/images/user.png"
+                         alt="User">
+                    <div>
+                        <h6>Dr. Anuj</h6>
+                        <small>Radiologist</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--====================
+            WELCOME SECTION
+        ======================-->
+        <section class="welcome">
+            <div class="welcome-text">
+                <h1>
+                    Welcome Back 👋
+                </h1>
+                <p>
+                    Manage patient reports, upload scans,
+                    and monitor AI analysis from one dashboard.
+                </p>
+            </div>
+        </section>
+        <!-- NEXT PART START -->
+<!--====================================
+        QUICK ACTIONS
+=====================================-->
+<section class="quick-actions">
+    <div class="container-fluid">
+        <div class="section-title">
+            <h3>Quick Actions</h3>
+            <p>
+                Perform important tasks quickly.
+            </p>
+        </div>
+        <div class="row g-4">
+            <!-- Upload -->
+            <div class="col-lg-4">
+                <div class="action-card">
+                      <i class="fas fa-upload"></i>Upload Scan
+                    <p>
+                        Upload X-ray, MRI or CT Scan images for AI analysis.
+                    </p>
+                    <a href="upload.html" class="btn btn-primary">
+                        Upload Now
+                    </a>
+                </div>
+            </div> 
+            <!-- Reports -->
+            <div class="col-lg-4">
+                <div class="action-card">
+                    <i class="fas fa-file-medical-alt"></i>
+                    <h4>View Reports</h4>
+                    <p>
+                        Check AI generated reports and patient diagnosis.
+                    </p>
+                    <a href="reports.html" class="btn btn-success">
+                        Open Reports
+                    </a>
+                </div>
+            </div>
+            <!-- History -->
+            <!-- <div class="col-lg-4">
+                <div class="action-card">
+                    <i class="fas fa-clock-rotate-left"></i>
+                    <h4>Patient History</h4>
+                    <p>
+                        Access previously uploaded scans and reports.
+                    </p>
+                    <a href="#" class="btn btn-warning text-white">
+                        View History
+                    </a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+<!-- NEXT PART START -->
+<!--=========================================
+        UPLOAD + AI STATUS SECTION
+==========================================-->
+<section class="dashboard-middle">
+    <div class="container-fluid">
+        <div class="row g-4">
+            <!-- AI Status -->
+            <div class="col-lg-4">
+                <div class="ai-status-card">
+                    <h3>
+                        AI System Status
+                    </h3>
+                    <div class="status-circle">
+                        <div class="circle">
+                            98%
+                        </div>
+                    </div>
+                    <h4 class="text-success mt-3">
+                        ● Online
+                    </h4>
+                    <p>
+                        AI Engine is running normally and ready for image analysis.
+                    </p>
+                    <div class="progress mt-3">
+                        <div class="progress-bar bg-success"
+                             style="width:98%">
+                        </div>
+                    </div>
+                    <small>
+                        Accuracy : 98%
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--=========================================
+        RECENT REPORTS
+==========================================-->
+<section class="recent-reports">
+    <div class="container-fluid">
+        <div class="card report-card">
+            <div class="card-header">
+                <h3>
+                    <i class="fas fa-file-medical"></i>
+                    Recent AI Reports
+                </h3>
+            </div>
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th>Patient</th>
+                            <th>Scan Type</th>
+                            <th>Disease</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rahul Sharma</td>
+                            <td>X-Ray</td>
+                            <td>Pneumonia</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Completed
+                                </span>
+                            </td>
+                            <td>05 Jul 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Priya Singh</td>
+                            <td>MRI</td>
+                            <td>Brain Tumor</td>
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                   Processing
+                                </span>
+                            </td>
+                            <td>04 Jul 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Amit Kumar</td>
+                            <td>CT Scan</td>
+                            <td>Lung Infection</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Completed
+                                </span>
+                            </td>
+                            <td>03 Jul 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- NEXT PART START -->
+<!--=========================================
+        ACTIVITY + CHART SECTION
+==========================================-->
+<section class="dashboard-bottom">
+    <div class="container-fluid">
+        <div class="row g-4">
+            <!-- Recent Activity -->
+            <div class="col-lg-4">
+                <div class="activity-card">
+                    <div class="card-title">
+                        <h3>
+                            <i class="fas fa-clock"></i>
+                            Recent Activity
+                        </h3>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon bg-primary">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h6>New Scan Uploaded</h6>
+                                <p>Chest X-Ray uploaded by Dr. Sharma</p>
+                                <small>5 Minutes Ago</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon bg-success">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h6>AI Analysis Completed</h6>
+                                <p>Pneumonia detected successfully.</p>
+                                <small>18 Minutes Ago</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon bg-warning">
+                                <i class="fas fa-file-medical"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h6>Report Generated</h6>
+                                <p>Patient report downloaded.</p>
+                                <small>45 Minutes Ago</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon bg-danger">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h6>New Patient Added</h6>
+                                <p>Registration completed.</p>
+                                <small>1 Hour Ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- AI Analytics -->
+            <div class="col-lg-8">
+                <div class="analytics-card">
+                    <div class="card-title d-flex justify-content-between align-items-center">
+                        <h3>
+                            <i class="fas fa-chart-line"></i>
+                            AI Analytics
+                        </h3>
+                        <span class="badge bg-success">
+                            Live
+                        </span>
+                    </div>
+                    <canvas id="analysisChart" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--=========================================
+        TOP DISEASES & AI TIPS
+=========================================-->
+<section class="extra-section">
+    <div class="container-fluid">
+        <div class="row g-4">
+            <!-- Top Diseases -->
+            <div class="col-lg-6">
+                <div class="disease-card">
+                    <div class="card-title">
+                        <h3>
+                            <i class="fas fa-virus"></i>
+                            Top Detected Diseases
+                        </h3>
+                    </div>
+                    <div class="disease-item">
+                        <span>Pneumonia</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" style="width:90%"></div>
+                        </div>
+                    </div>
+                    <div class="disease-item">
+                        <span>Tuberculosis</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width:75%"></div>
+                        </div>
+                    </div>
+                    <div class="disease-item">
+                        <span>Brain Tumor</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" style="width:60%"></div>
+                        </div>
+                    </div>
+                    <div class="disease-item"
+                        <span>Lung Infection</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width:80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- AI Tips -->
+            <div class="col-lg-6">
+                <div class="tips-card">
+                    <div class="card-title">
+                        <h3>
+                            <i class="fas fa-lightbulb"></i>
+                            AI Recommendations
+                        </h3>
+                    </div>
+                    <div class="tip-box">
+                        ✅ Upload high-resolution medical images.
+                    </div>
+                    <div class="tip-box">
+                        ✅ Ensure patient information is accurate.
+                    </div>
+                    <div class="tip-box">
+                        ✅ Verify AI reports before final diagnosis.
+                    </div>
+                    <div class="tip-box">
+                        ✅ Download reports in PDF format.
+                    </div>
+                    <div class="tip-box">
+                        ✅ Keep patient history updated.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- NEXT PART START -->
+<!--=========================================
+        PROFILE + CALENDAR + NOTIFICATIONS
+==========================================-->
+<section class="dashboard-widgets">
+    <div class="container-fluid">
+        <div class="row g-4">
+            <!-- User Profile -->
+            <div class="col-lg-4">
+                <div class="profile-card">
+                    <img src="../static/images/user.png"
+                         class="profile-img"
+                         alt="User">
+                    <h3>Dr. Anuj Kumar</h3>
+                    <!-- <p>Senior Radiologist</p> -->
+                    <div class="profile-info">
+                        <div>
+                        </div>
+                        <div>
+                            <h4>98%</h4>
+                            <span>Accuracy</span>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100 mt-4">
+                        <!-- <i class="fas fa-user-edit"></i> -->
+                         <a href="profile.html" class="fas fa-user-edit">
+                             Edit Profile
+                         </a>
+                    </button>
+                </div>
+            </div>
+            <!-- Notifications -->
+            <div class="col-lg-4">
+                <div class="notification-card">
+                    <div class="card-title">
+                        <h3>
+                            <i class="fas fa-bell"></i>
+otifications
+                        </h3>
+                    </div>
+                    <ul class="notification-list">
+                        <li>
+                            <i class="fas fa-circle text-success"></i>
+                            AI Report Generated Successfully
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-primary"></i>
+ew Patient Registered
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-warning"></i>
+                            MRI Scan Uploaded
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Server Maintenance Tonight
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--=========================================
+        FOOTER
+==========================================-->
+<footer class="dashboard-footer">
+    <div class="container-fluid"
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <p>
+                © 2026 <strong>MediScan AI</strong> | AI Powered Radiology Report Simplifier
+            </p>
+           
+        </div>
+    </div>
+</footer>
+</main>
+</div>
+<!--=========================================
+        JAVASCRIPT
+=========================================-->
+<script src="../static/js/theme.js"></script>
+<!-- Bootstrap -->
+<script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Chart JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Dashboard JS -->
+<script src="../static/js/dashboard.js"></script>
+</body>
+</html>

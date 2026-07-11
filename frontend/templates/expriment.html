@@ -1,0 +1,83 @@
+<!-- backend -->
+<!-- send otp 
+@app.route("/send-otp", methods=["POST"])
+def send_otp():
+
+    data=request.json
+
+    email=data["email"]
+
+    otp=str(random.randint(100000,999999))
+
+    cursor.execute(
+        "UPDATE users SET otp=%s WHERE email=%s",
+        (otp,email)
+    )
+
+    db.commit()
+
+    send_email(email,otp)
+
+    return jsonify(success=True) -->
+
+<!-- verify otp  -->
+<!-- @app.route("/verify-otp", methods=["POST"])
+def verify_otp():
+
+    data=request.json
+
+    email=data["email"]
+
+    otp=data["otp"]
+
+    cursor.execute(
+        "SELECT * FROM users WHERE email=%s AND otp=%s",
+        (email,otp)
+    )
+
+    user=cursor.fetchone()
+
+    if user:
+        return jsonify(success=True)
+
+    return jsonify(success=False) -->
+
+<!-- reset password  -->
+<!-- from werkzeug.security import generate_password_hash
+
+@app.route("/reset-password", methods=["POST"])
+def reset_password():
+
+    data=request.json
+
+    email=data["email"]
+
+    password=generate_password_hash(data["password"])
+
+    cursor.execute(
+        """
+        UPDATE users
+        SET password=%s,
+            otp=NULL
+        WHERE email=%s
+        """,
+        (password,email)
+    )
+
+    db.commit()
+
+    return jsonify(success=True) -->
+<!-- in database -->
+<!-- CREATE TABLE users(
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    name VARCHAR(100),
+
+    email VARCHAR(100) UNIQUE,
+
+    password VARCHAR(255),
+
+    otp VARCHAR(6)
+
+); -->
