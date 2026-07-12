@@ -24,3 +24,10 @@ env/
 # Operating System
 .DS_Store
 Thumbs.db
+
+# Ignore medical datasets
+ai_model/dataset/
+ai_model/datasets/
+
+# Ignore medical image datasets
+ai_model/dataset/

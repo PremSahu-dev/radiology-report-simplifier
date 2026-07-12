@@ -1,23 +1,25 @@
 from datasets.base_dataset import BaseDataset
 
-from preprocessing.dicom_reader import DicomReader
+from preprocessing.image_loader import ImageLoader
 
 
 class MRIDataset(BaseDataset):
 
     def __getitem__(self, index):
 
-        dicom_path = self.image_paths[index]
+        image_path = self.image_paths[index]
 
         label = self.labels[index]
 
-        reader = DicomReader(dicom_path)
+        # -------------------------
+        # Load image
+        # -------------------------
 
-        reader.load()
+        image, metadata = ImageLoader.load(image_path)
 
-        image = reader.get_image()
-
-        metadata = reader.get_metadata()
+        # -------------------------
+        # Preprocess image
+        # -------------------------
 
         processor = self.pipeline.get_preprocessor(
             metadata["modality"]
@@ -25,7 +27,10 @@ class MRIDataset(BaseDataset):
 
         image = processor.process(image)
 
-# Apply PyTorch transform
+        # -------------------------
+        # Apply PyTorch Transform
+        # -------------------------
+
         if self.transform is not None:
             image = self.transform(image)
 
