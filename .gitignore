@@ -11,8 +11,8 @@ env/
 .env
 
 # PyTorch Models
-*.pth
-*.pt
+#*.pth
+#*.pt
 
 # Logs
 *.log
@@ -27,7 +27,7 @@ Thumbs.db
 
 # Ignore medical datasets
 ai_model/dataset/
-ai_model/datasets/
+#ai_model/datasets/
 
 # Ignore medical image datasets
 ai_model/dataset/
