@@ -7,11 +7,11 @@ MRI, CT, and X-ray.
 
 import os
 
-from datasets.mri_dataset import MRIDataset
-from datasets.ct_dataset import CTDataset
-from datasets.xray_dataset import XRayDataset
+from ai_model.datasets.mri_dataset import MRIDataset
+from ai_model.datasets.ct_dataset import CTDataset
+from ai_model.datasets.xray_dataset import XRayDataset
 
-from preprocessing.pipeline import PreprocessingPipeline
+from ai_model.preprocessing.pipeline import PreprocessingPipeline
 
 
 class DatasetFactory:

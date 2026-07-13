@@ -7,9 +7,9 @@ sys.path.append(
     )
 )
 
-from models.mri_model import MRIModel
-from training.optimizer import get_optimizer
-from config import NUM_CLASSES
+from ai_model.models.mri_model import MRIModel
+from ai_model.training.optimizer import get_optimizer
+from ai_model.config import NUM_CLASSES
 
 
 model = MRIModel(

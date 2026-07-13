@@ -5,8 +5,8 @@ Trainer class for model training.
 """
 
 import torch
-from training.metrics import calculate_metrics
-from training.checkpoint import save_checkpoint
+from ai_model.training.metrics import calculate_metrics
+from ai_model.training.checkpoint import save_checkpoint
 
 class Trainer:
 

@@ -4,7 +4,7 @@ report_generator.py
 Generic report generator.
 """
 
-from report_generator.report_templates import REPORTS
+from ai_model.report_generator.report_templates import REPORTS
 
 
 def generate_report(modality,

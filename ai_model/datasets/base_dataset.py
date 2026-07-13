@@ -1,5 +1,5 @@
 from torch.utils.data import Dataset
-from preprocessing.transforms import get_default_transform
+from ai_model.preprocessing.transforms import get_default_transform
 
 
 class BaseDataset(Dataset):

@@ -1,4 +1,4 @@
-from report_generator.report_generator import generate_report
+from ai_model.report_generator.report_generator import generate_report
 import os
 import torch
 import torch.nn as nn
@@ -8,8 +8,8 @@ from torchvision import models, transforms
 import cv2
 import numpy as np
 
-from explainability.gradcam import GradCAM
-from explainability.visualize import overlay_heatmap
+from ai_model.explainability.gradcam import GradCAM
+from ai_model.explainability.visualize import overlay_heatmap
 
 # -------------------------------------------------
 # Configuration

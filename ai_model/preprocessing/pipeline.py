@@ -1,6 +1,6 @@
-from preprocessing.preprocess_xray import XRayPreprocessor
-from preprocessing.preprocess_ct import CTPreprocessor
-from preprocessing.preprocess_mri import MRIPreprocessor
+from ai_model.preprocessing.preprocess_xray import XRayPreprocessor
+from ai_model.preprocessing.preprocess_ct import CTPreprocessor
+from ai_model.preprocessing.preprocess_mri import MRIPreprocessor
 
 
 class PreprocessingPipeline:
@@ -23,12 +23,12 @@ class PreprocessingPipeline:
 
 
 """ 
-from preprocessing.dicom_reader import DicomReader
-from preprocessing.transforms import get_default_transform
+from ai_model.preprocessing.dicom_reader import DicomReader
+from ai_model.preprocessing.transforms import get_default_transform
 
-from preprocessing.preprocess_xray import XRayPreprocessor
-from preprocessing.preprocess_ct import CTPreprocessor
-from preprocessing.preprocess_mri import MRIPreprocessor
+from ai_model.preprocessing.preprocess_xray import XRayPreprocessor
+from ai_model.preprocessing.preprocess_ct import CTPreprocessor
+from ai_model.preprocessing.preprocess_mri import MRIPreprocessor
 
 
 class PreprocessingPipeline:

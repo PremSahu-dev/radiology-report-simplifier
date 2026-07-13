@@ -7,9 +7,9 @@ sys.path.append(
     )
 )
 
-from datasets.dataset_factory import DatasetFactory
-from datasets.dataloader import get_dataloader
-from preprocessing.pipeline import PreprocessingPipeline
+from ai_model.datasets.dataset_factory import DatasetFactory
+from ai_model.datasets.dataloader import get_dataloader
+from ai_model.preprocessing.pipeline import PreprocessingPipeline
 
 
 image_paths = [

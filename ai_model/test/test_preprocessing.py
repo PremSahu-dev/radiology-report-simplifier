@@ -4,8 +4,8 @@ import os
 # Add the ai_model directory to Python's search path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from preprocessing.dicom_reader import DicomReader
-from preprocessing.visualize import show_image
+from ai_model.preprocessing.dicom_reader import DicomReader
+from ai_model.preprocessing.visualize import show_image
 
 
 
@@ -13,8 +13,8 @@ from preprocessing.visualize import show_image
 
 
 
-from preprocessing.pipeline import PreprocessingPipeline
-from preprocessing.dicom_reader import DicomReader
+from ai_model.preprocessing.pipeline import PreprocessingPipeline
+from ai_model.preprocessing.dicom_reader import DicomReader
 import numpy as np
 
 dicom_path = "/home/kali/Tproject/radiology-report-simplifier-main/ai_model/preprocessing/imgMR2.dcm"
@@ -65,7 +65,7 @@ show_image(image, "Original MRI")
 
 '''
 
-from preprocessing.dicom_reader import DicomReader
+from ai_model.preprocessing.dicom_reader import DicomReader
 
 # Replace with the path to your DICOM file
 dicom_path = "/home/kali/Tproject/radiology-report-simplifier-main/ai_model/preprocessing/imgMR1.dcm"

@@ -7,7 +7,7 @@ sys.path.append(
     )
 )
 
-from models.model_factory import ModelFactory
+from ai_model.models.model_factory import ModelFactory
 
 
 modalities = [

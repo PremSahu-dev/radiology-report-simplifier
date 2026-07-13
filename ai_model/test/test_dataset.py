@@ -7,8 +7,8 @@ sys.path.append(
     )
 )
 
-from datasets.dataset_factory import DatasetFactory
-from preprocessing.pipeline import PreprocessingPipeline
+from ai_model.datasets.dataset_factory import DatasetFactory
+from ai_model.preprocessing.pipeline import PreprocessingPipeline
 
 # Replace with your MRI DICOM file
 image_paths = [

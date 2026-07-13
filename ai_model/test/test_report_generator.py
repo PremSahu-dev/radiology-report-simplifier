@@ -1,4 +1,4 @@
-from report_generator.report_generator import generate_report
+from ai_model.report_generator.report_generator import generate_report
 
 report = generate_report(
     modality="MR",

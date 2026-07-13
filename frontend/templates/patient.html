@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patients</title>
+</head>
+<body>
+
+<h2>Patient List</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+
+    <tbody id="patientsTable">
+
+    </tbody>
+
+</table>
+
+<script>
+
+fetch("http://127.0.0.1:8000/api/patients/")
+.then(response => response.json())
+.then(data => {
+
+    let table = document.getElementById("patientsTable");
+
+    data.forEach(patient => {
+
+        table.innerHTML += `
+        <tr>
+            <td>${patient.first_name} ${patient.last_name}</td>
+            <td>${patient.age}</td>
+            <td>${patient.gender}</td>
+            <td>${patient.phone}</td>
+        </tr>
+        `;
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

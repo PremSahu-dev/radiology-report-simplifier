@@ -1,4 +1,4 @@
-from preprocessing.base_preprocessor import BasePreprocessor
+from ai_model.preprocessing.base_preprocessor import BasePreprocessor
 
 
 class MRIPreprocessor(BasePreprocessor):

@@ -6,7 +6,7 @@ Creates PyTorch DataLoaders for datasets.
 
 from torch.utils.data import DataLoader
 
-from config import BATCH_SIZE
+from ai_model.config import BATCH_SIZE
 
 
 def get_dataloader(

@@ -7,15 +7,15 @@ Main training script.
 import torch
 from torch.utils.data import DataLoader
 
-from config import *
+from ai_model.config import *
 
-from datasets.dataset_factory import DatasetFactory
-from models.model_factory import ModelFactory
+from ai_model.datasets.dataset_factory import DatasetFactory
+from ai_model.models.model_factory import ModelFactory
 
-from training.losses import get_loss_function
-from training.optimizer import get_optimizer
-from training.scheduler import get_scheduler
-from training.trainer import Trainer
+from ai_model.training.losses import get_loss_function
+from ai_model.training.optimizer import get_optimizer
+from ai_model.training.scheduler import get_scheduler
+from ai_model.training.trainer import Trainer
 
 
 def main():

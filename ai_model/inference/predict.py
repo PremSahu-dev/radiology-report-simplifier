@@ -4,8 +4,8 @@ predict.py
 Unified AI prediction interface.
 """
 
-from inference.predict_mri import predict as predict_mri
-from inference.predict_xray import predict as predict_xray
+from ai_model.inference.predict_mri import predict as predict_mri
+from ai_model.inference.predict_xray import predict as predict_xray
 
 
 def predict(image_path, modality):

@@ -1,7 +1,7 @@
 import torch.nn as nn
 from torchvision import models
 
-from models.base_model import BaseModel
+from ai_model.models.base_model import BaseModel
 
 
 class MRIModel(BaseModel):

@@ -7,10 +7,10 @@ sys.path.append(
     )
 )
 
-from config import NUM_CLASSES
-from models.mri_model import MRIModel
-from training.optimizer import get_optimizer
-from training.scheduler import get_scheduler
+from ai_model.config import NUM_CLASSES
+from ai_model.models.mri_model import MRIModel
+from ai_model.training.optimizer import get_optimizer
+from ai_model.training.scheduler import get_scheduler
 
 
 model = MRIModel(

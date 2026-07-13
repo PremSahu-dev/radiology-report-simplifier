@@ -8,6 +8,6 @@ sys.path.append(
     )
 )
 
-from config import DEVICE
+from ai_model.config import DEVICE
 
 print("Selected Device:", DEVICE)

@@ -7,7 +7,7 @@ sys.path.append(
     )
 )
 
-from training.metrics import calculate_metrics
+from ai_model.training.metrics import calculate_metrics
 
 
 # Example labels

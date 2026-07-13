@@ -1,8 +1,8 @@
-from config import NUM_CLASSES
+from ai_model.config import NUM_CLASSES
 
-from models.mri_model import MRIModel
-from models.ct_model import CTModel
-from models.xray_model import XRayModel
+from ai_model.models.mri_model import MRIModel
+from ai_model.models.ct_model import CTModel
+from ai_model.models.xray_model import XRayModel
 
 
 class ModelFactory:
@@ -47,11 +47,11 @@ class ModelFactory:
 
 
 '''
-from config import NUM_CLASSES
+from ai_model.config import NUM_CLASSES
 
-from models.mri_model import MRIModel
-from models.ct_model import CTModel
-from models.xray_model import XRayModel
+from ai_model.models.mri_model import MRIModel
+from ai_model.models.ct_model import CTModel
+from ai_model.models.xray_model import XRayModel
 
 
 class ModelFactory:

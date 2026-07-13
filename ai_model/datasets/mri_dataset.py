@@ -1,6 +1,6 @@
-from datasets.base_dataset import BaseDataset
+from ai_model.datasets.base_dataset import BaseDataset
 
-from preprocessing.image_loader import ImageLoader
+from ai_model.preprocessing.image_loader import ImageLoader
 
 
 class MRIDataset(BaseDataset):

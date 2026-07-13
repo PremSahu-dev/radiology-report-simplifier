@@ -7,9 +7,9 @@ sys.path.append(
     )
 )
 
-from config import NUM_CLASSES
-from models.mri_model import MRIModel
-from training.checkpoint import (
+from ai_model.config import NUM_CLASSES
+from ai_model.models.mri_model import MRIModel
+from ai_model.training.checkpoint import (
     save_checkpoint,
     load_checkpoint
 )

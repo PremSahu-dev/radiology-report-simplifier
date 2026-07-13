@@ -4,10 +4,10 @@ import numpy as np
 import torch
 import torchxrayvision as xrv
 
-from preprocessing.dicom_reader import DicomReader
-from preprocessing.preprocess_xray import XRayPreprocessor
-from explainability.gradcam import GradCAM
-from report_generator.report_generator import generate_xray_report
+from ai_model.preprocessing.dicom_reader import DicomReader
+from ai_model.preprocessing.preprocess_xray import XRayPreprocessor
+from ai_model.explainability.gradcam import GradCAM
+from ai_model.report_generator.report_generator import generate_xray_report
 
 
 # -------------------------------------------------------

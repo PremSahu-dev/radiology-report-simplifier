@@ -7,19 +7,19 @@ sys.path.append(
     )
 )
 
-from config import NUM_CLASSES
+from ai_model.config import NUM_CLASSES
 
-from models.mri_model import MRIModel
+from ai_model.models.mri_model import MRIModel
 
-from training.losses import get_loss_function
-from training.optimizer import get_optimizer
-from training.scheduler import get_scheduler
-from training.trainer import Trainer
+from ai_model.training.losses import get_loss_function
+from ai_model.training.optimizer import get_optimizer
+from ai_model.training.scheduler import get_scheduler
+from ai_model.training.trainer import Trainer
 
-from datasets.dataset_factory import DatasetFactory
-from datasets.dataloader import get_dataloader
+from ai_model.datasets.dataset_factory import DatasetFactory
+from ai_model.datasets.dataloader import get_dataloader
 
-from preprocessing.pipeline import PreprocessingPipeline
+from ai_model.preprocessing.pipeline import PreprocessingPipeline
 
 
 image_paths = [

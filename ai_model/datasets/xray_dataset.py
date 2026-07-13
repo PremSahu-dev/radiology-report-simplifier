@@ -1,5 +1,5 @@
-from datasets.base_dataset import BaseDataset
-from preprocessing.dicom_reader import DicomReader
+from ai_model.datasets.base_dataset import BaseDataset
+from ai_model.preprocessing.dicom_reader import DicomReader
 
 
 class XRayDataset(BaseDataset):

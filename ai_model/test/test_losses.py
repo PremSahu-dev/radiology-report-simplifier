@@ -7,7 +7,7 @@ sys.path.append(
     )
 )
 
-from training.losses import get_loss_function
+from ai_model.training.losses import get_loss_function
 
 
 loss_function = get_loss_function()

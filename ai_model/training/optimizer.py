@@ -7,7 +7,7 @@ used for training the neural network.
 
 import torch.optim as optim
 
-from config import LEARNING_RATE
+from ai_model.config import LEARNING_RATE
 
 
 def get_optimizer(model):

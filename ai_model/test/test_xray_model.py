@@ -9,10 +9,10 @@ sys.path.append(
 
 import torch
 
-from config import NUM_CLASSES
-from models.xray_model import XRayModel
-from datasets.dataset_factory import DatasetFactory
-from preprocessing.pipeline import PreprocessingPipeline
+from ai_model.config import NUM_CLASSES
+from ai_model.models.xray_model import XRayModel
+from ai_model.datasets.dataset_factory import DatasetFactory
+from ai_model.preprocessing.pipeline import PreprocessingPipeline
 
 # -------------------------------
 # X-Ray DICOM file

@@ -1,5 +1,5 @@
-from preprocessing.dicom_reader import DicomReader
-from preprocessing.preprocess_xray import XRayPreprocessor
+from ai_model.preprocessing.dicom_reader import DicomReader
+from ai_model.preprocessing.preprocess_xray import XRayPreprocessor
 
 reader = DicomReader(
     "/home/kali/Downloads/000001.dcm"

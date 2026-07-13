@@ -9,10 +9,10 @@ sys.path.append(
 
 import torch
 
-from config import NUM_CLASSES
-from models.ct_model import CTModel
-from datasets.dataset_factory import DatasetFactory
-from preprocessing.pipeline import PreprocessingPipeline
+from ai_model.config import NUM_CLASSES
+from ai_model.models.ct_model import CTModel
+from ai_model.datasets.dataset_factory import DatasetFactory
+from ai_model.preprocessing.pipeline import PreprocessingPipeline
 
 
 # -------------------------------
@@ -37,7 +37,7 @@ pipeline = PreprocessingPipeline()
 # Create dataset
 # -------------------------------
 '''
-from preprocessing.dicom_reader import DicomReader
+from ai_model.preprocessing.dicom_reader import DicomReader
 
 reader = DicomReader(
     "/home/kali/Tproject/radiology-report-simplifier-main/ai_model/preprocessing/imgCT2.dcm"
