@@ -54,16 +54,18 @@ class MetadataExtractor:
         # X-Ray
         # -------------------------
 
-        elif "top_prediction" in ai_result:
+        elif "prediction" in ai_result:
 
+        
 
-            top = ai_result[
-                "top_prediction"
-            ]
+            prediction = ai_result["prediction"]
+
+            confidence = ai_result["confidence"]
+            
 
 
             data["prediction"] = (
-                top.get(
+                ai_result.get(
                     "disease",
                     ""
                 )
@@ -71,7 +73,7 @@ class MetadataExtractor:
 
 
             data["confidence"] = (
-                top.get(
+                ai_result.get(
                     "confidence",
                     0
                 )

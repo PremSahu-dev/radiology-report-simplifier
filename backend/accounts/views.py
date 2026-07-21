@@ -5,13 +5,15 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 
 from rest_framework_simplejwt.tokens import RefreshToken
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 
 from .serializers import (
     RegisterSerializer,
     LoginSerializer
 )
 
-
+@method_decorator(csrf_exempt, name="dispatch")
 class RegisterView(APIView):
 
     def post(self, request):
@@ -37,7 +39,7 @@ class RegisterView(APIView):
             status=status.HTTP_400_BAD_REQUEST
         )
 
-
+@method_decorator(csrf_exempt, name="dispatch")
 class LoginView(APIView):
 
     def post(self, request):

@@ -50,9 +50,11 @@ if (loginBtn) {
 // ================================
 const form = document.querySelector("form");
 
+
 if (form) {
 
     form.addEventListener("submit", async function (e) {
+        
 
         e.preventDefault();
 
@@ -88,12 +90,18 @@ if (form) {
             });
 
             const data = await response.json();
-
+            console.log("Login response:", data);
+            
             if (response.ok) {
 
                 localStorage.setItem("access", data.access);
                 localStorage.setItem("refresh", data.refresh);
+                localStorage.setItem("username", username);
 
+
+                console.log("Access Token:", localStorage.getItem("access"));
+                console.log("Refresh Token:", localStorage.getItem("refresh"));
+                console.log(localStorage.getItem("access"));
                 Swal.fire({
                     icon: "success",
                     title: "Login Successful",
@@ -103,7 +111,7 @@ if (form) {
 
                 setTimeout(() => {
 
-                    window.location.href = "dashboard.html";
+                    window.location.href = "/dashboard/";
 
                 }, 1500);
 

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,45 +13,45 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
-          <link rel="stylesheet" href="../static/css/theme.css">
+          <link rel="stylesheet" href="{% static 'css/theme.css' %}">
     <!-- Upload CSS -->
-    <link rel="stylesheet" href="../static/css/upload.css">
+    <link rel="stylesheet" href="{% static 'css/upload.css' %}">
 </head>
 <body>
 <div class="wrapper">
     <!-- ================= Sidebar ================= -->
     <aside class="sidebar">
         <div class="logo">
-            <img src="../static/images/logo.png" width="60">
+            <img src= "{% static 'images/logo.png' %}" width="60">
             <h3>MediScan AI</h3>
         </div>
         <ul class="menu">
             <li>
-                <a href="dashboard.html">
+                <a href="/dashboard/">
                     <i class="fas fa-home"></i>
                     Dashboard
                 </a>
             </li>
             <li class="active">
-                <a href="upload.html">
+                <a href="/upload/">
                     <i class="fas fa-upload"></i>
                     Upload Scan
                 </a>
             </li>
             <li>
-                <a href="reports.html">
+                <a href="/reports/">
                     <i class="fas fa-file-medical"></i>
                    AI Reports
                 </a>
             </li>
             <li>
-                <a href="profile.html">
+                <a href="/profile/">
                     <i class="fas fa-user"></i>
                     Profile
                 </a>
             </li>
             <li>
-                <a href="index.html">
+                <a href="/">
                     <i class="fas fa-sign-out-alt"></i>
                     Logout
                 </a>
@@ -67,7 +68,7 @@
                     Upload X-Ray, MRI or CT Scan for AI Analysis
                 </p>
             </div>
-            <a href="dashboard.html" class="btn btn-primary">
+            <a href="/dashboard/" class="btn btn-primary">
                 <i class="fas fa-arrow-left"></i>
                 Dashboard
             </a>
@@ -152,6 +153,7 @@
             </label>
             <input
                 type="text"
+                id="patientName"
                 class="form-control"
                 placeholder="Enter Patient Name"
                 required>
@@ -163,6 +165,7 @@
             </label>
             <input
                 type="number"
+                id="patientAge"
                 class="form-control"
                 placeholder="Enter Age"
                 min="1"
@@ -174,7 +177,7 @@
             <label class="form-label">
                 Gender
             </label>
-            <select class="form-select" required>
+            <select id="patientGender"class="form-select" required>
                 <option selected disabled>
                     Select Gender
                 </option>
@@ -188,15 +191,19 @@
             <label class="form-label">
                 Scan Type
             </label>
-            <select class="form-select" required>
-                <option selected disabled>
-                    Select Scan
-                </option>
-                <option>X-Ray</option>
-                <option>CT Scan</option>
-                <option>MRI</option>
-                <option>DICOM</option>
-            </select>
+           <select id="scanType" class="form-select" required>
+
+    <option value="">Select Scan</option>
+
+    <option value="XRAY">X-Ray</option>
+
+    <option value="CT">CT Scan</option>
+
+    <option value="MR">MRI</option>
+
+    <option value="DX">Digital X-Ray</option>
+
+</select>
         </div>
         <!-- Hospital Name -->
         <!-- <div class="mb-3">
@@ -215,6 +222,7 @@
             </label>
             <input
                 type="date"
+                id="scanDate"
                 class="form-control">
         </div>
         <!-- Symptoms -->
@@ -241,12 +249,12 @@
         </div>
     </main>
 </div>
-<script src="../static/js/theme.js"></script>
+<script src="{% static 'js/theme.js' %}"></script>
 <!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Upload JS -->
-<script src="../static/js/upload.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="../static/js/upload.js"></script>
+<script src="{% static 'js/upload.js' %}"></script>
 </body>
 </html>

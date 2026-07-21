@@ -5,7 +5,7 @@ Builds dynamic prompts for NLP models.
 """
 
 
-from prompts.simplify_prompts import (
+from nlp.prompts.simplify_prompt import (
     SIMPLE_REPORT_SUMMARY_PROMPT,
     SIMPLE_SENTENCE_PROMPT,
     RECOMMENDATION_PROMPT

@@ -5,11 +5,11 @@ Main glossary interface.
 """
 
 
-from glossary.medical_terms import (
+from nlp.glossary.medical_terms import (
     MEDICAL_TERMS
 )
 
-from glossary.abbreviations import (
+from nlp.glossary.abbreviations import (
     ABBREVIATIONS
 )
 

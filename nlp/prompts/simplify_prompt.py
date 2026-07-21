@@ -59,3 +59,24 @@ Simple explanation:
 """
 
     return prompt
+"""
+Prompt templates used by the NLP simplifier.
+"""
+
+SIMPLE_SENTENCE_PROMPT = """
+Rewrite the following medical sentence in simple language.
+
+{text}
+"""
+
+SIMPLE_REPORT_SUMMARY_PROMPT = """
+Rewrite this medical report in language that patients can understand.
+
+{report}
+"""
+
+RECOMMENDATION_PROMPT = """
+Rewrite this recommendation using simple words.
+
+{recommendation}
+"""

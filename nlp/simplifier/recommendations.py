@@ -6,7 +6,7 @@ into patient-friendly instructions.
 """
 
 
-from glossary.glossary import Glossary
+from nlp.glossary.glossary import Glossary
 
 
 

@@ -27,13 +27,13 @@
         </div>
         <ul class="menu">
             <li>
-                <a href="dashboard.html">
+                <a href="/dashboard/">
                     <i class="fas fa-home"></i>
                     Dashboard
                 </a>
             </li>
             <li>
-                <a href="upload.html">
+                <a href="/upload/">
                     <i class="fas fa-upload"></i>
                     Upload Scan
                 </a>
@@ -51,7 +51,7 @@
                 </a>
             </li>
             <li>
-                <a href="index.html">
+                <a href="/index/">
                     <i class="fas fa-sign-out-alt"></i>
                     Logout
                 </a>
@@ -68,7 +68,7 @@
                     Artificial Intelligence Generated Medical Report
                 </p>
             </div>
-            <a href="upload.html" class="btn btn-primary">
+            <a href="/upload/" class="btn btn-primary">
                 <i class="fas fa-arrow-left"></i>
                 Back to Upload
             </a>
@@ -99,27 +99,27 @@
     <table class="table mt-3">
         <tr>
             <th>Name</th>
-            <td>Rahul Sharma</td>
+            <td id="patientName"></td>
         </tr>
         <tr>
             <th>Age</th>
-            <td>32 Years</td>
+            <td id="patientAge"></td>
         </tr>
         <tr>
             <th>Gender</th>
-            <td>Male</td>
+            <td id="patientGender"></td>
         </tr>
         <tr>
             <th>Scan Type</th>
-            <td>Chest X-Ray</td>
+            <td id="scanType"></td>
         </tr>
         <tr>
             <th>Hospital</th>
-            <td>City Hospital</td>
+            <td id="hospital"></td>
         </tr>
         <tr>
             <th>Date</th>
-            <td>18 May 2026</td>
+            <td id="reportDate"></td>
         </tr>
     </table>
 </div>
@@ -145,8 +145,7 @@
             <i class="fas fa-circle-check"></i>
             AI Prediction
         </h4>
-        <h2 class="text-success">
-            Normal Chest X-Ray
+        <h2 class="text-success" id="prediction">
         </h2>
         <p>
             No major abnormalities were detected by the AI model.
@@ -156,21 +155,24 @@
     <div class="mt-4">
         <div class="d-flex justify-content-between">
             <strong>Confidence Score</strong>
-            <strong>98%</strong>
+            <strong id="confidenceText"></strong>
         </div>
         <div class="progress mt-2">
-            <div class="progress-bar bg-success"
-                 style="width:98%;">
-                98%
-            </div>
+          <div
+          class="progress-bar bg-success"
+          id="confidenceBar"
+          style="width:0%">
+           0%
+          </div>  
         </div>
     </div>
     <!-- Severity -->
     <div class="mt-4">
         <div class="d-flex justify-content-between">
             <strong>Severity Level</strong>
-            <span class="badge bg-success">
-                Low Risk
+            <span
+            class="badge bg-success"
+            id="severity">
             </span>
         </div>
     </div>
@@ -201,12 +203,11 @@
             <i class="fas fa-user-doctor"></i>
             AI Recommendation
         </h5>
-        <p class="mb-0">
-            This AI analysis suggests a normal chest X-ray. However,
-            please consult a qualified radiologist or physician for
-            final medical confirmation.
-        </p>
-    </div>
+        <p
+        class="mb-0"
+        id="recommendation">
+         </p>
+        </div>
 </div>
 <!-- part - 4 -->
 <!-- ================= Action Buttons ================= -->
@@ -225,8 +226,25 @@
         </div>
         <!-- Print -->
         <div class="col-lg-4 col-md-6">
-            <button class="btn btn-primary w-100 py-3"
-                    onclick="window.print()">
+            {% comment %} <button class="btn btn-primary w-100 py-3"
+                    onclick="window.print()"> {% endcomment %}
+                    <button
+                   class="btn btn-primary w-100 py-3"
+                   id="printBtn">
+                
+
+
+         
+
+                        
+
+                        
+
+                        
+
+                    
+
+                      
                 <i class="fas fa-print"></i><br>
                 Print Report
             </button>
@@ -240,7 +258,7 @@
         </div>
         <!-- Upload Another -->
         <div class="col-lg-6">
-            <a href="upload.html"
+            <a href="/upload/"
                class="btn btn-warning w-100 py-3">
                 <i class="fas fa-upload"></i>
                 Analyze Another Scan
@@ -248,7 +266,7 @@
         </div>
         <!-- Dashboard -->
         <div class="col-lg-6">
-            <a href="dashboard.html"
+            <a href="/dashboard/"
                class="btn btn-dark w-100 py-3">
                 <i class="fas fa-home"></i>
                 Back to Dashboard

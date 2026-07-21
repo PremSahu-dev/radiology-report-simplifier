@@ -5,13 +5,13 @@ Simplifies individual medical sentences.
 """
 
 
-from glossary.glossary import Glossary
+from nlp.glossary.glossary import Glossary
 
-from simplifier.postprocess import PostProcessor
+from nlp.simplifier.postprocessor import PostProcessor
 
-from simplifier.huggingface_model import HuggingFaceModel
+from nlp.simplifier.huggingface_model import HuggingFaceModel
 
-from simplifier.prompts_builder import PromptBuilder
+from nlp.simplifier.prompt_builder import PromptBuilder
 
 
 

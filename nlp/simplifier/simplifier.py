@@ -5,7 +5,7 @@ Main entry point for NLP report simplification.
 """
 
 
-from simplifier.report_simplifier import (
+from nlp.simplifier.report_simplifier import (
     ReportSimplifier
 )
 

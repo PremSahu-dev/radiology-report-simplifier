@@ -6,7 +6,7 @@ with NLP parser.
 """
 
 
-from nlp.report_parse.parser import ReportParser
+from nlp.report_parser.parser import ReportParser
 
 
 
@@ -29,3 +29,4 @@ class InferenceAdapter:
             ai_result,
             modality
         )
+        

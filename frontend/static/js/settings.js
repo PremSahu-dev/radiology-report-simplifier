@@ -188,7 +188,7 @@ if (resetSettings) {
                 if (languageSelect) {
                     languageSelect.value = "en";
                 }
-                localStorage.removeItem("theme");
+               localStorage.removeItem("theme");
                 Swal.fire({
                     icon: "success",
                     title: "Settings Reset",
@@ -199,7 +199,7 @@ if (resetSettings) {
             }
         });
     });
-}
+};
 <!-- part -3 -->
 // ================================
 // Auto Save Toggle Preferences

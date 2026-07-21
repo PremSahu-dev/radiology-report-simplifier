@@ -38,25 +38,44 @@ if (progressBar) {
 // Download PDF Button
 // ================================
 const downloadBtn = document.getElementById("downloadBtn");
+
 if (downloadBtn) {
+
     downloadBtn.addEventListener("click", function () {
-        Swal.fire({
-            title: "Generating PDF...",
-            text: "Please wait...",
-            allowOutsideClick: false,
-            didOpen: () => {
-                Swal.showLoading();
+        const id = localStorage.getItem("lastReportId");
+
+        const token = localStorage.getItem("access");
+
+        fetch(
+            "http://127.0.0.1:8000/api/reports/" + id + "/download_pdf/",
+            {
+                headers: {
+                    Authorization: "Bearer " + token
+                }
             }
-        });
-        setTimeout(() => {
-            Swal.fire({
-                icon: "success",
-                title: "PDF Ready",
-                text: "Backend integration will enable real PDF download."
+        )
+            .then(res => res.blob())
+            .then(blob => {
+
+                const url = window.URL.createObjectURL(blob);
+
+                const a = document.createElement("a");
+
+                a.href = url;
+
+                a.download = "Medical_Report.pdf";
+
+                a.click();
+
+                window.URL.revokeObjectURL(url);
+
             });
-        }, 2000);
+
     });
+        
+
 }
+        
 // ================================
 // Email Button
 // ================================
@@ -69,4 +88,79 @@ if (emailBtn) {
             text: "Report sent successfully (Demo Version)."
         });
     });
+}
+const printBtn = document.getElementById("printBtn");
+
+if (printBtn) {
+
+    printBtn.addEventListener("click", function () {
+
+        const content =
+            document.querySelector(".result-card").innerHTML;
+
+        const w = window.open("", "", "width=900,height=700");
+
+        w.document.write(`
+       <html>
+         <head>
+         <title>Medical Report</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+        </head>
+        <body>
+       ${content}
+      </body>
+      </html>
+     `);
+
+        w.document.close();
+        w.print();
+        w.close();
+
+    });
+
+}
+
+const id = localStorage.getItem("lastReportId");
+const token = localStorage.getItem("access");
+
+if (id && token) {
+
+    fetch("http://127.0.0.1:8000/api/reports/" + id + "/", {
+
+        headers: {
+            Authorization: "Bearer " + token
+        }
+
+    })
+
+        .then(res => res.json())
+
+        .then(report => {
+
+            document.getElementById("patientName").innerText =
+                report.patient_name;
+
+            document.getElementById("scanType").innerText =
+                report.scan_type;
+
+            document.getElementById("prediction").innerText =
+                report.ai_prediction;
+
+            document.getElementById("confidence").innerText =
+                report.confidence + "%";
+
+            document.getElementById("severity").innerText =
+                report.severity;
+
+            document.getElementById("recommendation").innerText =
+                report.recommendation;
+
+            document.getElementById("doctorNotes").innerText =
+                "Reviewed by AI Engine";
+
+            document.getElementById("reportDate").textContent =
+                report.created_at.substring(0, 10);
+
+        });
+
 }

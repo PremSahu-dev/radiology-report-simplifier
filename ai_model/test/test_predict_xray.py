@@ -5,7 +5,7 @@ result = predict("/home/kali/Downloads/000001.dcm")
 print("=" * 50)
 print("Top Prediction")
 print("=" * 50)
-print(result["top_prediction"])
+print(result["prediction"])
 
 print()
 

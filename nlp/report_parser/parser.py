@@ -5,11 +5,11 @@ Main report parser.
 """
 
 
-from report_parse.findings import (
+from nlp.report_parser.findings import (
     FindingsExtractor
 )
 
-from report_parse.metadata import (
+from nlp.report_parser.metadata import (
     MetadataExtractor
 )
 

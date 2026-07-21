@@ -6,7 +6,7 @@ simplified medical reports.
 """
 
 
-from readability.sentence_splitter import (
+from nlp.readability.sentence_splitter import (
     SentenceSplitter
 )
 

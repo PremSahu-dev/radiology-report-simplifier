@@ -5,6 +5,8 @@
 // ================================
 // Page Load Animation
 // ================================
+console.log("REPORTS JS LOADED");
+alert("REPORTS JS LOADED");
 window.addEventListener("load", function () {
     const cards = document.querySelectorAll(
         ".search-card, .table-card, .stats-card, .quick-actions"
@@ -43,15 +45,30 @@ if (statusFilter) {
     statusFilter.addEventListener("change", function () {
         const value = this.value.toLowerCase();
         const rows = document.querySelectorAll("#reportTable tbody tr");
+        // rows.forEach(row => {
+        //     if (value === "all") {
+        //         row.style.display = "";
+        //         return;
+        //     }
+        //     const status = row.cells[6].innerText.toLowerCase();
+        //     row.style.display = status.includes(value)
+        //         ? ""
+        //         : "none";
+        // });
         rows.forEach(row => {
+
             if (value === "all") {
                 row.style.display = "";
                 return;
             }
+
             const status = row.cells[6].innerText.toLowerCase();
-            row.style.display = status.includes(value)
-                ? ""
-                : "none";
+
+            row.style.display =
+                status.includes(value)
+                    ? ""
+                    : "none";
+
         });
     });
 }
@@ -144,6 +161,7 @@ if (downloadAll) {
                 text: "Backend integration will download all reports as ZIP."
             });
         }, 2500);
+        
     });
 }
 // ================================
@@ -182,14 +200,21 @@ function updateStatistics() {
     let completed = 0;
     let pending = 0;
     rows.forEach(row => {
+
+        if (row.cells.length < 7) return;
+
         const status = row.cells[6].innerText.trim();
+
         if (status === "Completed") {
             completed++;
         }
+
         if (status === "Pending") {
             pending++;
         }
+
     });
+    
     const cards = document.querySelectorAll(".stats-content h3");
     if (cards.length >= 3) {
         cards[0].textContent = total;
@@ -220,3 +245,142 @@ setTimeout(() => {
         timerProgressBar: true
     });
 }, 800);
+
+const token = localStorage.getItem("access");
+
+if (token) {
+
+    fetch("http://127.0.0.1:8000/api/reports/", {
+        
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+
+    })
+   
+
+        // .then(res => {
+        //     console.log("Status:", res.status);
+        //     return res.json();
+        // })
+    //     .then(data => {
+    //         console.log("Reports:", data);
+    //         console.log("About to fetch reports...");
+
+    //         const tbody = document.querySelector("#reportTable tbody");
+    //         console.log("TBODY:", tbody);
+    //         console.log("Length:", data.length);
+    //         tbody.innerHTML = "";
+    //         tbody.innerHTML = "<tr><td colspan='8'>TEST ROW</td></tr>";
+
+
+    //         data.forEach(report => {
+    //             console.log(report);
+    //             tbody.innerHTML += `
+    //     <tr>
+    //         <td>${report.id}</td>
+    //         <td>${report.patient_name}</td>
+    //         <td>${report.scan_type}</td>
+    //         <td>${report.ai_prediction}</td>
+    //         <td>${report.confidence}</td>
+    //         <td>${report.created_at.substring(0, 10)}</td>
+    //         <td>${report.status}</td>
+    //         <td>
+    //        <button class="btn btn-primary btn-sm">
+    //         View
+    //        </button>
+    // </td>
+    //     </tr>
+    //     `;
+    //         });
+
+    //         updateStatistics();
+    //     })  
+
+
+
+    //     .catch(error => {
+    //         console.log(error);
+
+    //         Swal.fire({
+    //             icon: "error",
+    //             title: "Failed to load reports"
+    //         });
+    //     });
+        // .then(data => {
+
+        //     console.log(data);
+
+        //     const tbody = document.querySelector("#reportTable tbody");
+
+        //     tbody.innerHTML = "";
+
+        //     data.forEach(function (report) {
+
+        //         console.log(report);
+
+        //         const row = document.createElement("tr");
+
+        //         row.innerHTML = `
+        //     <td>${report.id}</td>
+        //     <td>${report.patient_name}</td>
+        //     <td>${report.scan_type}</td>
+        //     <td>${report.ai_prediction}</td>
+        //     <td>${report.confidence}</td>
+        //     <td>${report.created_at}</td>
+        //     <td>${report.status}</td>
+        //     <td>
+        //         <button class="btn btn-primary btn-sm">View</button>
+        //     </td>
+        // `;
+
+        //         tbody.appendChild(row);
+
+        //     });
+
+        //     console.log("Rows:", tbody.rows.length);
+
+        //     updateStatistics();
+
+        // })
+        .then(async res => {
+
+            console.log("Status:", res.status);
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                console.log(data);
+
+                Swal.fire({
+                    icon: "error",
+                    title: "Session Expired",
+                    text: "Please login again."
+                });
+
+                localStorage.removeItem("access");
+                localStorage.removeItem("refresh");
+
+                window.location.href = "/login/";
+
+                return;
+            }
+
+            return data;
+
+        })
+        .then(data => {
+
+            if (!data) return;
+
+            console.log(data);
+
+            data.forEach(report => {
+
+                // existing code
+
+            });
+
+        })
+
+}

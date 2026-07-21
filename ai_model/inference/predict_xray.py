@@ -46,10 +46,18 @@ def predict(image_path):
     # Load DICOM
     # -----------------------------
 
-    reader = DicomReader(image_path)
-    reader.load()
+    ext = os.path.splitext(image_path)[1].lower()
 
-    image = reader.get_image()
+    if ext == ".dcm":
+       reader = DicomReader(image_path)
+       reader.load()
+       image = reader.get_image()
+
+    else:
+       image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+
+       if image is None:
+        raise Exception("Unable to read image.")
 
     # -----------------------------
     # Preprocess
@@ -160,13 +168,17 @@ def predict(image_path):
     # Return
     # -----------------------------
 
+    top = results[0]
+
     return {
 
-        "top_prediction": results[0],
+       "prediction": top["disease"],
 
-        "all_predictions": results,
+       "confidence": top["confidence"],
 
-        "gradcam_path": gradcam_path,
+       "gradcam_path": gradcam_path,
 
-        "report": report
-    }
+       "report": report,
+
+       "all_predictions": results
+}

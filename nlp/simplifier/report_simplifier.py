@@ -6,19 +6,19 @@ medical reports into patient-friendly reports.
 """
 
 
-from simplifier.sentence_simplifier import (
+from nlp.simplifier.sentence_simplifier import (
     SentenceSimplifier
 )
 
-from simplifier.recommendation import (
+from nlp.simplifier.recommendations import (
     RecommendationSimplifier
 )
 
-from simplifier.templates_engine import (
+from nlp.simplifier.template_engine import (
     TemplatesEngine
 )
 
-from readability.readability_score import (
+from nlp.readability.readability_score import (
     ReadabilityScore
 )
 

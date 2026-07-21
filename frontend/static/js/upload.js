@@ -5,6 +5,7 @@
 // ===================================
 // Elements
 // ===================================
+let selectedFile = null;
 const dropArea = document.getElementById("dropArea");
 const fileInput = document.getElementById("fileInput");
 const previewCard = document.getElementById("previewCard");
@@ -57,6 +58,7 @@ function uploadFile(file) {
         alert("Please upload an image file.");
         return;
     }
+    selectedFile = file;
     progressContainer.classList.remove("d-none");
     let progress = 0;
     const interval = setInterval(() => {
@@ -103,7 +105,7 @@ removeBtn.addEventListener("click", function () {
 // AI Analyze Button
 // ===================================
 const analyzeBtn = document.getElementById("analyzeBtn");
-analyzeBtn.addEventListener("click", function () {
+analyzeBtn.addEventListener("click",async function () {
     if (previewImage.src === "") {
         Swal.fire({
             icon: "warning",
@@ -112,43 +114,138 @@ analyzeBtn.addEventListener("click", function () {
         });
         return;
     }
-    Swal.fire({
-        title: "Analyzing Scan...",
-        html: `
-            <b>AI Model Loading...</b><br><br>
-            <div class="progress">
-                <div id="aiProgress"
-                     class="progress-bar progress-bar-striped progress-bar-animated"
-                     style="width:0%">
-                    0%
-                </div>
-            </div>
-        `,
-        allowOutsideClick: false,
-        showConfirmButton: false,
-        didOpen: () => {
-            let progress = 0;
-            const bar = document.getElementById("aiProgress");
-            const timer = setInterval(() => {
-                progress += 5;
-                bar.style.width = progress + "%";
-                bar.innerHTML = progress + "%";
-                if (progress >= 100) {
-                    clearInterval(timer);
-                    Swal.fire({
-                        icon: "success",
-                        title: "Analysis Complete",
-                        text: "AI has successfully analyzed the scan.",
-                        timer: 2000,
-                        showConfirmButton: false
-                    }).then(() => {
-                        // Future Django Result Page
-                         window.location.href="result.html";
-                    });
-                }
-            },120);
+    const patientName = document.getElementById("patientName").value;
+    const age = document.getElementById("patientAge").value;
+    const gender = document.getElementById("patientGender").value;
+    const scanType = document.getElementById("scanType").value;
+
+
+    const token = localStorage.getItem("access");
+
+    if (!token) {
+        Swal.fire({
+            icon: "error",
+            title: "Login Required"
+        });
+        return;
+    }
+
+    try {
+
+        // Step 1 : Create Patient
+
+        const patientResponse = await fetch(
+            "http://127.0.0.1:8000/api/patients/",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json",
+
+                    Authorization:
+                        `Bearer ${token}`
+                },
+
+                body: JSON.stringify({
+
+                    name:
+                        document.getElementById("patientName").value,
+
+                    age:
+                        document.getElementById("patientAge").value,
+
+                    gender:
+                        document.getElementById("patientGender").value
+
+                })
+
+            }
+        );
+
+        const patient = await patientResponse.json();
+        
+        if (!patientResponse.ok) {
+            Swal.fire({
+                icon: "error",
+                title: "Patient Creation Failed"
+            });
+            return;
         }
-    });
+        // Step 2 : Create Report
+
+        const formData = new FormData();
+
+        formData.append("patient", patient.id);
+
+        formData.append(
+            "scan_type",
+            document.getElementById("scanType").value
+        );
+
+        formData.append(
+            "image",
+            selectedFile
+        );
+
+        const reportResponse = await fetch(
+            "http://127.0.0.1:8000/api/reports/",
+            {
+
+                method: "POST",
+
+                headers: {
+
+                    Authorization:
+                        `Bearer ${token}`
+
+                },
+
+                body: formData
+
+            });
+         
+
+        const report = await reportResponse.json();
+        if (!reportResponse.ok) {
+            Swal.fire({
+                icon: "error",
+                title: "Report Generation Failed",
+                text: report.recommendation || "Unknown Error"
+            });
+            return;
+        }
+        localStorage.setItem("lastReportId", report.id);
+        Swal.fire({
+
+            icon: "success",
+
+            title: "AI Analysis Completed",
+
+            html: `
+            <b>Prediction:</b> ${report.ai_prediction}<br>
+            <b>Confidence:</b> ${report.confidence}%<br>
+            <b>Status:</b> ${report.status}
+            `
+
+        });
+        setTimeout(() => {
+            window.location.href = "/reports/";
+        }, 1500);
+
+    }
+    catch (error) {
+
+        console.log(error);
+
+        Swal.fire({
+
+            icon: "error",
+
+            title: "Upload Failed"
+
+        });
+
+    }
 });
 // ===================================
 // Drag Area Click Support

@@ -7,12 +7,10 @@ used for medical text simplification.
 
 
 import torch
-
 from transformers import (
     AutoTokenizer,
     AutoModelForSeq2SeqLM
 )
-
 
 
 class HuggingFaceModel:

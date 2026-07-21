@@ -205,3 +205,71 @@ window.onload=function(){
 setTimeout(()=>{
     console.log("🤖 AI Engine Ready");
 },2500);
+
+/*=========================================
+LOAD REPORTS FROM DJANGO
+=========================================*/
+
+async function loadReports() {
+
+    const token = localStorage.getItem("access");
+
+    if (!token) {
+        console.log("No Login Token Found");
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+            "http://127.0.0.1:8000/api/reports/",
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }
+        );
+
+        const reports = await response.json();
+
+        const table = document.getElementById("reportTable");
+
+        table.innerHTML = "";
+
+        reports.forEach(report => {
+
+            table.innerHTML += `
+            <tr>
+
+                <td>${report.patient}</td>
+
+                <td>${report.scan_type}</td>
+
+                <td>${report.ai_prediction}</td>
+
+                <td>
+
+                    <span class="badge bg-success">
+                        ${report.status}
+                    </span>
+
+                </td>
+
+                <td>${report.created_at}</td>
+
+            </tr>
+            `;
+
+        });
+
+    }
+
+    catch (error) {
+
+        console.log(error);
+
+    }
+
+}
+
+loadReports();
